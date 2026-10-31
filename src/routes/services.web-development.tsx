@@ -13,20 +13,29 @@ import { Faqs } from "@/components/webdev/Faqs";
 import { ContactForm } from "@/components/webdev/ContactForm";
 import { Footer } from "@/components/webdev/Footer";
 
-const title = "Web Development Services — six2eight";
+const siteUrl = "https://ozyrah.vercel.app";
+const title = "Web Development Services — Custom Web Apps & High-Speed Sites | Ozyrah";
 const description =
-  "Custom, high-performance websites built to convert: strategy, design, development and ongoing optimization by six2eight.";
+  "Custom, high-performance web development built to convert. Enterprise React, Next.js, headless CMS, and full-stack web applications engineered for speed and scale by Ozyrah.";
+const keywords =
+  "web development services, custom web applications, React developers, Next.js agency, full-stack web development, enterprise website engineering, frontend architecture, Ozyrah web development";
 
 export const Route = createFileRoute("/services/web-development")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
+      { name: "keywords", content: keywords },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${siteUrl}/services/web-development` },
+      { property: "og:site_name", content: "Ozyrah" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: `${siteUrl}/services/web-development` }],
   }),
   component: WebDevelopmentPage,
 });

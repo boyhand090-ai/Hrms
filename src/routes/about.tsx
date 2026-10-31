@@ -24,20 +24,29 @@ import { ReviewCarousel } from "@/components/site/review-carousel";
 import { VisionariesCarousel } from "@/components/site/visionaries-carousel";
 import { CALENDLY } from "@/data/site";
 
-const title = "About Us — six2eight Digital Growth Agency";
+const siteUrl = "https://ozyrah.vercel.app";
+const title = "About Ozyrah — Global Digital Growth, Design & Engineering Studio";
 const description =
-  "Meet six2eight: the strategists, designers and engineers building connected digital growth systems for ambitious brands.";
+  "Meet Ozyrah: an elite squad of product designers, software engineers, and growth strategists building connected, high-impact digital systems for world-class brands.";
+const keywords =
+  "about Ozyrah, digital agency team, software engineering, UI/UX design studio, web development agency, tech leadership, digital transformation experts";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
+      { name: "keywords", content: keywords },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${siteUrl}/about` },
+      { property: "og:site_name", content: "Ozyrah" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: `${siteUrl}/about` }],
   }),
   component: About,
 });
@@ -67,7 +76,7 @@ const founder = {
   linkedin: "https://www.linkedin.com/in/syedmdtalha26/",
   facebook: "https://www.facebook.com/syedmdtalha26/",
   bio: [
-    "Syed founded six2eight on a simple belief: great digital work happens when strategy, design and engineering sit at one table instead of handing problems over a wall.",
+    "Syed founded Ozyrah on a simple belief: great digital work happens when strategy, design and engineering sit at one table instead of handing problems over a wall.",
     "Over the years he has guided founders and enterprises through launches, rebuilds and growth pushes — always hands-on, always allergic to shortcuts that don't scale.",
     "When he isn't in a sprint review, you'll find him sketching product ideas, mentoring young designers and engineers, or quietly rewriting a landing page at midnight.",
   ],
@@ -118,7 +127,7 @@ function About() {
           <div className="relative mx-auto max-w-5xl text-center animate-fade-up">
             <div>
               <span className="eyebrow border-primary/40 shadow-[0_0_18px_-2px_rgba(154,253,13,0.35)]">
-                About six2eight
+                About Ozyrah
               </span>
             </div>
             <h1 className="text-display mt-6 text-5xl font-semibold leading-[1.02] tracking-tight md:text-8xl">
@@ -194,7 +203,7 @@ function About() {
               <LazyImage
                 src="/assets/team.jpg"
                 fallbackSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
-                alt="The six2eight team"
+                alt="The Ozyrah team"
                 width={1600}
                 height={912}
                 aspectRatio="aspect-[1600/912]"
@@ -279,7 +288,7 @@ function About() {
             </Reveal>
             <Reveal delay={40}>
               <h2 className="text-display mt-4 max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-                The mind behind <span className="text-primary">six2eight</span>
+                The mind behind <span className="text-primary">Ozyrah</span>
               </h2>
             </Reveal>
 
@@ -309,7 +318,7 @@ function About() {
                         </p>
                       </div>
                       <span className="rounded-full border border-primary/40 bg-surface/80 px-3 py-1 text-xs font-medium text-foreground shadow-[0_0_12px_rgba(154,253,13,0.35)] backdrop-blur-sm">
-                        six2eight
+                        Ozyrah
                       </span>
                     </div>
                   </div>
@@ -453,7 +462,7 @@ function About() {
                       />
                       <text className="text-[7px] sm:text-[7.5px] font-bold uppercase tracking-[0.24em] fill-black/85">
                         <textPath href="#ctaCirclePath" startOffset="0%">
-                          • SIX2EIGHT • START A PROJECT • DIGITAL GROWTH
+                          • OZYRAH • START A PROJECT • DIGITAL GROWTH
                         </textPath>
                       </text>
                     </svg>

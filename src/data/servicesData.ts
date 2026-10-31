@@ -3,6 +3,7 @@ import { siteData } from "./webdev/siteData";
 export interface ServiceMeta {
   title: string;
   description: string;
+  keywords?: string;
 }
 
 export interface ServiceHero {
@@ -125,9 +126,11 @@ export const uiUxDesignData: FullServiceData = {
   serviceName: "UI & UX Design",
   category: "Design Services",
   meta: {
-    title: "UI & UX Design Services — six2eight",
+    title: "UI & UX Design Services — Human-Centered Digital Products | Ozyrah",
     description:
-      "Transform user journeys with intuitive, human-centered UI & UX design. Wireframing, design systems, and conversion-focused experiences by six2eight.",
+      "Transform user journeys with intuitive, human-centered UI & UX design. Design systems, wireframing, interactive prototypes, and high-converting UX by Ozyrah.",
+    keywords:
+      "UI UX design services, user experience design agency, Figma design systems, UX research, conversion rate optimization, product design studio, Ozyrah design",
   },
   hero: {
     title: "Human-Centered UI & UX Design Services!",
@@ -406,9 +409,11 @@ export const webDesignData: FullServiceData = {
   serviceName: "Web Design",
   category: "Design Services",
   meta: {
-    title: "Web Design Services — Modern & High-Converting Websites | six2eight",
+    title: "Bespoke Web Design Services — High-Converting Digital Experiences | Ozyrah",
     description:
-      "Award-winning web design crafted to elevate your brand and drive business conversions. Responsive, modern, and high-impact web design by six2eight.",
+      "Award-winning web design crafted to elevate your brand and drive business conversions. Modern, responsive, and performance-tuned web design by Ozyrah.",
+    keywords:
+      "web design services, custom web design agency, responsive website design, modern web designer, corporate web design, luxury brand design, Ozyrah web design",
   },
   hero: {
     title: "Conversion-Focused Modern Web Design Services!",
@@ -678,9 +683,11 @@ export const mobileAppDesignData: FullServiceData = {
   serviceName: "Mobile App Design",
   category: "Design Services",
   meta: {
-    title: "Mobile App Design Services — iOS & Android App UX/UI | six2eight",
+    title: "Mobile App Design Services — Native iOS & Android UI/UX | Ozyrah",
     description:
-      "Native iOS and Android mobile app design services that drive 5-star ratings, user retention, and frictionless mobile interactions by six2eight.",
+      "Native iOS and Android mobile app design services engineered for 5-star ratings, retention, and frictionless mobile interactions by Ozyrah.",
+    keywords:
+      "mobile app design, iOS app UI UX, Android app design, Flutter UI design, mobile product design, app interface design agency, Ozyrah mobile design",
   },
   hero: {
     title: "Seamless iOS & Android Mobile App Design Services!",
@@ -938,9 +945,11 @@ export const brandingIdentityData: FullServiceData = {
   serviceName: "Branding & Identity",
   category: "Design Services",
   meta: {
-    title: "Branding & Identity Design Services — six2eight",
+    title: "Branding & Visual Identity Design Services — Iconic Brand Systems | Ozyrah",
     description:
-      "Craft an iconic, memorable brand identity. Logos, color systems, typography, and comprehensive brand stylebooks that stand out by six2eight.",
+      "Craft an iconic, memorable brand identity. Logos, color systems, typography, and comprehensive brand guidelines that command authority by Ozyrah.",
+    keywords:
+      "branding agency, visual identity design, logo design studio, brand style guide, corporate identity, luxury branding, brand strategy agency, Ozyrah branding",
   },
   hero: {
     title: "Memorable Branding & Visual Identity Services!",
@@ -1191,9 +1200,11 @@ export const wordpressDevData: FullServiceData = {
   serviceName: "WordPress Development",
   category: "Development Services",
   meta: {
-    title: "Custom WordPress Development Services — High-Speed & Secure | six2eight",
+    title: "Custom WordPress Development Services — High-Speed & Enterprise Security | Ozyrah",
     description:
-      "Enterprise custom WordPress development. Bespoke Gutenberg blocks, ACF, WooCommerce, and headless setups engineered for speed and security by six2eight.",
+      "Enterprise custom WordPress development. Bespoke Gutenberg blocks, Advanced Custom Fields, WooCommerce, and headless setups engineered by Ozyrah.",
+    keywords:
+      "custom WordPress development, WordPress agency, headless WordPress, custom Gutenberg blocks, WooCommerce development, WordPress speed optimization, Ozyrah",
   },
   hero: {
     title: "High-Performance Custom WordPress Development Services!",
@@ -1458,9 +1469,11 @@ export const shopifyDevData: FullServiceData = {
   serviceName: "Shopify Development",
   category: "Development Services",
   meta: {
-    title: "Shopify Development Services — High-Converting E-Commerce Stores | six2eight",
+    title: "Shopify & Shopify Plus Development Services — High-Converting Stores | Ozyrah",
     description:
-      "Scale e-commerce revenue with custom Shopify and Shopify Plus development. Bespoke Liquid themes, app integrations, and checkout optimization by six2eight.",
+      "Scale e-commerce revenue with custom Shopify and Shopify Plus development. Bespoke Liquid themes, checkout optimization, and custom app integration by Ozyrah.",
+    keywords:
+      "Shopify Plus agency, custom Shopify development, e-commerce web design, Shopify theme customization, headless Shopify, conversion rate optimization, Ozyrah",
   },
   hero: {
     title: "Revenue-Driven Shopify & Shopify Plus Development Services!",
@@ -1725,9 +1738,11 @@ export const webflowDevData: FullServiceData = {
   serviceName: "Webflow Development",
   category: "Development Services",
   meta: {
-    title: "Webflow Development Services — Custom, No-Code Builds | six2eight",
+    title: "Webflow Development Services — Client-First Standard & Custom Interactions | Ozyrah",
     description:
-      "Pixel-perfect Webflow development built on Client-First standards. Advanced CMS, custom interactions, and marketing autonomy by six2eight.",
+      "Pixel-perfect Webflow development built on Client-First standards. Advanced CMS, custom interactions, and marketing autonomy engineered by Ozyrah.",
+    keywords:
+      "Webflow development agency, certified Webflow experts, Finsweet Client-First, custom Webflow interactions, Webflow CMS architecture, Ozyrah Webflow",
   },
   hero: {
     title: "Pixel-Perfect Webflow Development Services!",
@@ -1992,9 +2007,11 @@ export const digitalMarketingData: FullServiceData = {
   serviceName: "Digital Marketing",
   category: "Advertisement",
   meta: {
-    title: "Digital Marketing Services — Full-Funnel Growth & Acquisition | six2eight",
+    title: "Digital Marketing Services — Full-Funnel Growth & Revenue Acquisition | Ozyrah",
     description:
-      "Data-driven digital marketing services that scale revenue. Omnichannel acquisition, conversion optimization, and marketing automation by six2eight.",
+      "Data-driven digital marketing services that scale revenue. Omnichannel acquisition, conversion optimization, and marketing automation by Ozyrah.",
+    keywords:
+      "digital marketing services, full-funnel growth agency, customer acquisition, marketing automation, omnichannel marketing, performance growth, Ozyrah marketing",
   },
   hero: {
     title: "Data-Driven Digital Marketing Growth Services!",
@@ -2259,9 +2276,11 @@ export const paidAdsData: FullServiceData = {
   serviceName: "Paid Search & Social Ads",
   category: "Advertisement",
   meta: {
-    title: "Paid Search & Social Ads Management — High-ROI Google & Meta Ads | six2eight",
+    title: "Paid Search & Social Ads Management — High-ROAS Google & Meta Ads | Ozyrah",
     description:
-      "Maximize return on ad spend (ROAS) with performance-driven Google Ads, Meta Ads (Facebook/Instagram), TikTok, and LinkedIn ad management by six2eight.",
+      "Maximize return on ad spend (ROAS) with performance-driven Google Ads, Meta Ads (Facebook/Instagram), TikTok, and LinkedIn ad management by Ozyrah.",
+    keywords:
+      "paid ads agency, Google Ads management, Meta Ads agency, TikTok ads, LinkedIn PPC, ROAS optimization, performance marketing agency, Ozyrah paid ads",
   },
   hero: {
     title: "High-ROI Paid Search & Social Ad Campaigns!",
@@ -2526,9 +2545,11 @@ export const seoMarketingData: FullServiceData = {
   serviceName: "SEO & Growth Marketing",
   category: "Advertisement",
   meta: {
-    title: "SEO & Organic Growth Marketing Services — Top Google Rankings | six2eight",
+    title: "SEO & Organic Growth Marketing Services — Top Google Rankings | Ozyrah",
     description:
-      "Dominate search results with data-backed technical SEO, high-authority link acquisition, and content clustering by six2eight.",
+      "Dominate search rankings with data-backed technical SEO, high-authority link acquisition, topical authority clustering, and organic growth by Ozyrah.",
+    keywords:
+      "SEO agency, technical SEO services, organic growth marketing, link building, high-intent keywords, local SEO, enterprise SEO consulting, Ozyrah SEO",
   },
   hero: {
     title: "Sustainable SEO & Organic Growth Marketing Services!",
@@ -2793,9 +2814,11 @@ export const contentMarketingData: FullServiceData = {
   serviceName: "Content & Influencer Marketing",
   category: "Advertisement",
   meta: {
-    title: "Content & Influencer Marketing Services — High-Impact Brand Growth | six2eight",
+    title: "Content & Influencer Marketing Services — High-Impact Brand Growth | Ozyrah",
     description:
-      "Attract, engage, and convert buyers with compelling content creation and vetted influencer partnerships by six2eight.",
+      "Attract, engage, and convert buyers with compelling content creation and vetted influencer partnerships engineered by Ozyrah.",
+    keywords:
+      "content marketing agency, influencer marketing management, short-form video production, brand storytelling, creator partnerships, thought leadership, Ozyrah",
   },
   hero: {
     title: "Engaging Content & Influencer Marketing Services!",

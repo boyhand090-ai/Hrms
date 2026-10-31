@@ -38,20 +38,29 @@ import { allCountries, type CountryCode } from "@/data/countries";
 export type { CountryCode };
 export const countryCodes = allCountries;
 
-const title = "Contact Us — six2eight Digital Growth Agency";
+const siteUrl = "https://ozyrah.vercel.app";
+const title = "Contact Ozyrah — Start Your Digital Growth & Engineering Project";
 const description =
-  "Get in touch with six2eight. Book a 30-min strategy call, request a custom project quote, or discuss your digital growth, web, and design objectives.";
+  "Partner with Ozyrah. Request a custom quote or schedule a 30-min strategy session for custom web development, UI/UX systems, e-commerce, or AI automation.";
+const keywords =
+  "contact Ozyrah, hire web developers, digital agency inquiry, custom software development quote, UI UX design consultation, AI automation agency, web design agency contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
+      { name: "keywords", content: keywords },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${siteUrl}/contact` },
+      { property: "og:site_name", content: "Ozyrah" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: `${siteUrl}/contact` }],
   }),
   component: ContactPage,
 });
@@ -146,7 +155,7 @@ const contactFaqs = [
   },
   {
     q: "Who will actually work on my project?",
-    a: "Unlike traditional agencies that pitch with senior executives and delegate to junior trainees, six2eight squads are staffed strictly with senior designers, engineers, and growth directors with 6+ years of domain experience.",
+    a: "Unlike traditional agencies that pitch with senior executives and delegate to junior trainees, Ozyrah squads are staffed strictly with senior designers, engineers, and growth directors with 6+ years of domain experience.",
   },
   {
     q: "Can you take over an existing codebase or design system?",
@@ -247,9 +256,9 @@ function ContactPage() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("hello@six2eight.com");
+    navigator.clipboard.writeText("hello@ozyrah.com");
     setCopiedEmail(true);
-    toast.success("hello@six2eight.com copied to clipboard!");
+    toast.success("hello@ozyrah.com copied to clipboard!");
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
@@ -363,12 +372,12 @@ function ContactPage() {
                   {copiedEmail ? (
                     <>
                       <Check className="size-4 text-primary" />
-                      <span className="text-primary font-semibold">hello@six2eight.com Copied</span>
+                      <span className="text-primary font-semibold">hello@ozyrah.com Copied</span>
                     </>
                   ) : (
                     <>
                       <Mail className="size-4 text-neutral-400" />
-                      <span>hello@six2eight.com</span>
+                      <span>hello@ozyrah.com</span>
                       <Copy className="size-3.5 text-neutral-500 ml-1" />
                     </>
                   )}
@@ -873,125 +882,6 @@ function ContactPage() {
                           className="w-full rounded-xl bg-surface border border-border px-4 py-3 text-sm text-foreground placeholder:text-neutral-500 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                         />
                       </div>
-
-                      <div className="relative" ref={hearAboutRef}>
-                        <label className="block text-xs font-medium text-neutral-400 mb-1.5 flex items-center justify-between">
-                          <span>How did you hear about six2eight?</span>
-                          <span className="text-[10px] text-neutral-500">Optional</span>
-                        </label>
-                        <button
-                          type="button"
-                          onClick={() => setHearAboutDropdownOpen((prev) => !prev)}
-                          aria-haspopup="listbox"
-                          aria-expanded={hearAboutDropdownOpen}
-                          className="w-full h-12 px-3.5 sm:px-4 rounded-xl bg-surface border border-border hover:border-neutral-500 flex items-center justify-between gap-3 text-left transition-all cursor-pointer focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40"
-                        >
-                          {(() => {
-                            const selected = hearAboutOptions.find((o) => o.value === hearAbout);
-                            if (selected) {
-                              const Icon = selected.icon;
-                              return (
-                                <div className="flex items-center gap-2.5 truncate">
-                                  <div className="size-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                                    <Icon className={cn("size-3.5", selected.color)} />
-                                  </div>
-                                  <div className="truncate">
-                                    <div className="text-xs font-semibold text-white truncate">
-                                      {selected.label}
-                                    </div>
-                                    <div className="text-[10px] text-neutral-400 truncate">
-                                      {selected.subtext}
-                                    </div>
-                                  </div>
-                                </div>
-                              );
-                            }
-                            return (
-                              <span className="text-xs sm:text-sm text-neutral-400">
-                                Select discovery channel...
-                              </span>
-                            );
-                          })()}
-                          <ChevronDown
-                            className={cn(
-                              "size-4 text-neutral-400 transition-transform duration-200 shrink-0",
-                              hearAboutDropdownOpen && "rotate-180 text-primary",
-                            )}
-                          />
-                        </button>
-
-                        {/* Custom Luxury Dropdown Menu */}
-                        {hearAboutDropdownOpen && (
-                          <div className="absolute left-0 right-0 top-full mt-2 z-50 rounded-2xl border border-white/10 bg-[#141419]/95 p-1.5 shadow-[0_24px_70px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,255,255,0.06),0_12px_36px_rgba(154,253,13,0.08)] backdrop-blur-2xl animate-in fade-in-0 zoom-in-95 duration-150">
-                            <div className="p-2 border-b border-white/5 flex items-center justify-between text-[11px] font-semibold text-neutral-400">
-                              <span>Choose a discovery source</span>
-                              {hearAbout && (
-                                <button
-                                  type="button"
-                                  onClick={() => {
-                                    setHearAbout("");
-                                    setHearAboutDropdownOpen(false);
-                                  }}
-                                  className="text-[10px] text-neutral-400 hover:text-white transition-colors cursor-pointer"
-                                >
-                                  Clear selection
-                                </button>
-                              )}
-                            </div>
-                            <div className="max-h-64 overflow-y-auto p-1 space-y-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/20">
-                              {hearAboutOptions.map((opt) => {
-                                const Icon = opt.icon;
-                                const isSelected = hearAbout === opt.value;
-                                return (
-                                  <button
-                                    key={opt.value}
-                                    type="button"
-                                    onClick={() => {
-                                      setHearAbout(opt.value);
-                                      setHearAboutDropdownOpen(false);
-                                    }}
-                                    className={cn(
-                                      "w-full flex items-center justify-between p-2 sm:p-2.5 rounded-xl text-left transition-all cursor-pointer group",
-                                      isSelected
-                                        ? "bg-primary/15 text-white border border-primary/30"
-                                        : "hover:bg-white/8 text-neutral-300 hover:text-white border border-transparent",
-                                    )}
-                                  >
-                                    <div className="flex items-center gap-3 min-w-0">
-                                      <div
-                                        className={cn(
-                                          "size-8 rounded-lg flex items-center justify-center shrink-0 border transition-all",
-                                          isSelected
-                                            ? "bg-primary/20 border-primary/40 text-primary"
-                                            : "bg-white/5 border-white/10 text-neutral-300 group-hover:border-white/20 group-hover:scale-105",
-                                        )}
-                                      >
-                                        <Icon
-                                          className={cn(
-                                            "size-4",
-                                            isSelected ? "text-primary" : opt.color,
-                                          )}
-                                        />
-                                      </div>
-                                      <div className="min-w-0">
-                                        <div className="text-xs font-semibold truncate group-hover:text-white">
-                                          {opt.label}
-                                        </div>
-                                        <div className="text-[10px] text-neutral-400 truncate">
-                                          {opt.subtext}
-                                        </div>
-                                      </div>
-                                    </div>
-                                    {isSelected && (
-                                      <Check className="size-4 text-primary shrink-0 stroke-[2.5] ml-2" />
-                                    )}
-                                  </button>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        )}
-                      </div>
                     </div>
 
                     {/* Submit Action Button */}
@@ -1074,7 +964,7 @@ function ContactPage() {
                       <div>
                         <div className="text-xs text-muted-foreground">General & Proposals</div>
                         <div className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
-                          hello@six2eight.com
+                          hello@ozyrah.com
                         </div>
                       </div>
                     </button>
@@ -1086,9 +976,7 @@ function ContactPage() {
                     </div>
                     <div>
                       <div className="text-xs text-muted-foreground">Founder & Leadership</div>
-                      <div className="text-sm font-semibold text-foreground">
-                        syed@six2eight.com
-                      </div>
+                      <div className="text-sm font-semibold text-foreground">syed@ozyrah.com</div>
                     </div>
                   </li>
 
@@ -1158,7 +1046,7 @@ function ContactPage() {
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-sm sm:text-base text-muted-foreground">
-              Everything you need to know about partnering with six2eight.
+              Everything you need to know about partnering with Ozyrah.
             </p>
           </div>
 

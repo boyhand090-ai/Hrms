@@ -61,14 +61,25 @@ function ProjectCard({ p, large, index }: { p: Project; large?: boolean; index?:
       {/* Subtle primary glow on hover */}
       <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 [background:radial-gradient(120%_90%_at_50%_120%,color-mix(in_oklab,var(--color-primary)_26%,transparent),transparent_65%)] z-1" />
 
-      {/* Top meta row: clean year badge and arrow button (no clutter) */}
-      <div className="absolute inset-x-0 top-0 flex items-start justify-between p-5 sm:p-6 z-2">
+      {/* Top meta row: clean year badge on left, and 2-3 tags only when card has ample size */}
+      <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-5 sm:p-6 z-2">
         <span className="pill glass-panel border border-white/10 px-3.5 py-1 text-xs font-medium tracking-wider text-white/90 backdrop-blur-md">
           {p.year}
         </span>
-        <span className="pill glass-panel flex size-10 items-center justify-center text-white backdrop-blur-md transition-all duration-500 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
-          <ArrowUpRight className="size-4.5 transition-transform duration-500 group-hover:rotate-45" />
-        </span>
+
+        {/* Display 2-3 tags only if the card has enough size (large bento cards) */}
+        {large && p.categories && p.categories.length > 0 && (
+          <div className="flex flex-wrap items-center justify-end gap-1.5 max-w-[70%]">
+            {p.categories.slice(0, 3).map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[11px] font-medium tracking-wide text-zinc-200 backdrop-blur-md shadow-xs transition-colors group-hover:border-primary/40 group-hover:text-white"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Bottom content: spacious layout with generous breathing room, zero overlapping tags */}

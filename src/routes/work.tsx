@@ -23,20 +23,29 @@ import { Magnetic } from "@/components/site/magnetic";
 import { CALENDLY } from "@/data/site";
 import { cn } from "@/lib/utils";
 
-const title = "Work & Case Studies — six2eight Digital Growth Agency";
+const title = "Featured Work & Case Studies — Ozyrah Digital Agency";
 const description =
-  "Explore featured digital products, high-conversion websites, and custom platforms built by six2eight for ambitious brands worldwide.";
+  "Explore production digital platforms, high-conversion real estate developments, aesthetic clinics, and custom e-commerce systems engineered by Ozyrah.";
+const keywords =
+  "portfolio, case studies, web development portfolio, real estate websites, clinic web portals, e-commerce case studies, Ozyrah work, digital transformation";
+const canonical = "https://ozyrah.vercel.app/work";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
+      { name: "keywords", content: keywords },
+      { property: "og:site_name", content: "Ozyrah" },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: canonical },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
     ],
+    links: [{ rel: "canonical", href: canonical }],
   }),
   component: WorkPage,
 });

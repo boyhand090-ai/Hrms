@@ -14,18 +14,25 @@ import { ContactForm } from "@/components/webdev/ContactForm";
 import { Footer } from "@/components/webdev/Footer";
 import { contentMarketingData } from "@/data/servicesData";
 
-const { meta } = contentMarketingData;
+const siteUrl = "https://ozyrah.vercel.app";
+const { meta, slug } = contentMarketingData;
 
 export const Route = createFileRoute("/services/content-marketing")({
   head: () => ({
     meta: [
       { title: meta.title },
       { name: "description", content: meta.description },
+      ...(meta.keywords ? [{ name: "keywords", content: meta.keywords }] : []),
       { property: "og:title", content: meta.title },
       { property: "og:description", content: meta.description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${siteUrl}/services/${slug}` },
+      { property: "og:site_name", content: "Ozyrah" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: meta.title },
+      { name: "twitter:description", content: meta.description },
     ],
+    links: [{ rel: "canonical", href: `${siteUrl}/services/${slug}` }],
   }),
   component: ContentMarketingPage,
 });
