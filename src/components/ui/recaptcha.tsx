@@ -124,9 +124,7 @@ export function ReCaptcha({
       </div>
 
       {errorMessage && (
-        <p className="text-xs text-rose-400 font-medium animate-in fade-in">
-          {errorMessage}
-        </p>
+        <p className="text-xs text-rose-400 font-medium animate-in fade-in">{errorMessage}</p>
       )}
     </div>
   );

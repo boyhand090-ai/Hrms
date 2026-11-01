@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <rect width="100" height="100" rx="22" fill="#FF2E63"/>
-  <circle cx="50" cy="50" r="28" fill="#FFFFFF" fill-opacity="0.2"/>
-  <path fill="#FFFFFF" d="M50 24c-14.4 0-26 11.6-26 26s11.6 26 26 26 26-11.6 26-26-11.6-26-26-26zm0 10c8.8 0 16 7.2 16 16H50V34zm-16 16c0-8.8 7.2-16 16-16v16H34zm0 6h31.6c-2.4 9.6-11 16-21.6 16-11.8 0-21.4-9.3-21.9-21 .1.2.2.4.3.6l11.6 4.4z"/>
+  <defs>
+    <linearGradient id="protoPieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF334B"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#protoPieGrad)"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M31 23h24.5C67.5 23 75 30.2 75 40.8c0 10.7-7.5 17.8-19.5 17.8H42.8V77H31V23zm11.8 10v15.6h12.2c5.8 0 8.8-3.4 8.8-7.8 0-4.4-3-7.8-8.8-7.8H42.8z"/>
 </svg>
