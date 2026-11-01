@@ -2,11 +2,10 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { portfolioFilters, projects, type Project } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./reveal";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 /**
  * Authentic brand tool badges matching the six2eight.com reference design.
- * Rendered inside crisp white rounded squircle containers at the bottom left of cards.
+ * Rendered inside crisp white/brand squircle containers at the bottom left of cards.
  */
 function ToolBadge({ tool }: { tool: string }) {
   const t = tool.toLowerCase();
@@ -15,7 +14,7 @@ function ToolBadge({ tool }: { tool: string }) {
     return (
       <div
         title="Figma"
-        className="size-7 sm:size-8 rounded-lg bg-white/95 shadow-md p-1.5 flex items-center justify-center shrink-0 backdrop-blur-xs transition-transform duration-300 hover:scale-110"
+        className="size-7 sm:size-8 rounded-lg bg-white shadow-sm p-1.5 flex items-center justify-center shrink-0 backdrop-blur-xs transition-transform duration-300 hover:scale-110"
       >
         <svg className="size-full" viewBox="0 0 38 57" fill="none">
           <path
@@ -47,10 +46,10 @@ function ToolBadge({ tool }: { tool: string }) {
     return (
       <div
         title="Webflow"
-        className="size-7 sm:size-8 rounded-lg bg-white/95 shadow-md p-1.5 flex items-center justify-center shrink-0 backdrop-blur-xs transition-transform duration-300 hover:scale-110"
+        className="size-7 sm:size-8 rounded-lg bg-[#146EF5] shadow-sm p-1.5 flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-110"
       >
-        <svg className="size-full" viewBox="0 0 24 24" fill="#146EF5">
-          <path d="M16.48 7.37L12.9 14.7l-2.47-5.07h-3.6l4.28 8.81L7.54 24h3.61l2.48-5.11 2.48 5.11h3.6l-3.58-5.56 4.31-8.81h-3.96z" />
+        <svg className="size-full" viewBox="0 0 100 100" fill="white">
+          <path d="M100 32.227l-15.01 47.935H58.629l10.598-33.826-17.151 33.826H30.144L4.814 32.227h27.054l10.63 33.649 16.758-33.649H77.92l-9.82 32.26 10.835-32.26H100z" />
         </svg>
       </div>
     );
@@ -60,10 +59,10 @@ function ToolBadge({ tool }: { tool: string }) {
     return (
       <div
         title="WordPress"
-        className="size-7 sm:size-8 rounded-lg bg-white/95 shadow-md p-1.5 flex items-center justify-center shrink-0 backdrop-blur-xs transition-transform duration-300 hover:scale-110"
+        className="size-7 sm:size-8 rounded-lg bg-white shadow-sm p-1.5 flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-110"
       >
-        <svg className="size-full" viewBox="0 0 24 24" fill="#21759B">
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.182c5.422 0 9.818 4.396 9.818 9.818 0 1.916-.554 3.702-1.507 5.215l-4.48-12.986c.01-.01.022-.016.033-.024.364-.173.74-.29 1.127-.353l-.004-.32h-3.834l.004.32c.412.067.81.203 1.18.406l2.84 7.962-1.92 5.753-3.21-9.544c.413-.07.81-.205 1.182-.408l.003-.32h-3.832l.003.32c.42.068.825.21 1.201.42l3.435 9.775-2.22 6.643C4.195 19.344 2.182 15.908 2.182 12c0-5.422 4.396-9.818 9.818-9.818z" />
+        <svg className="size-full" viewBox="0 0 100 100" fill="#21759B">
+          <path d="M50 0C22.386 0 0 22.386 0 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zm0 9.091c22.592 0 40.909 18.317 40.909 40.909 0 7.983-2.308 15.426-6.279 21.729L57.25 17.587c.042-.042.092-.067.138-.1 1.517-.721 3.083-1.208 4.696-1.471l-.017-1.333H46.083l.017 1.333c1.717.279 3.375.846 4.917 1.692l11.833 33.175-8 23.971-13.375-39.767c1.721-.292 3.375-.854 4.925-1.7l.013-1.333H30.438l.013 1.333c1.75.283 3.438.875 5.004 1.75l14.313 40.729-9.25 27.679C17.479 80.6 9.091 66.283 9.091 50c0-22.592 18.317-40.909 40.909-40.909z" />
         </svg>
       </div>
     );
@@ -73,10 +72,17 @@ function ToolBadge({ tool }: { tool: string }) {
     return (
       <div
         title="Shopify"
-        className="size-7 sm:size-8 rounded-lg bg-white/95 shadow-md p-1.5 flex items-center justify-center shrink-0 backdrop-blur-xs transition-transform duration-300 hover:scale-110"
+        className="size-7 sm:size-8 rounded-lg bg-white shadow-sm p-1.5 flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-110"
       >
-        <svg className="size-full" viewBox="0 0 24 24" fill="#95BF47">
-          <path d="M19.35 6.72c-.08-.54-.57-.86-1.04-.84-.46.02-3.1.28-3.1.28s-2.07-2.06-2.31-2.3c-.24-.24-.71-.34-1.09-.23-.1.03-.64.21-1.46.48-.87-.72-1.97-1.11-3.18-1.11-.27 0-.54.02-.8.06-2.39.4-3.79 2.5-3.12 5.05.51 1.94 1.76 4.14 2.8 5.61l-1.97 9.87 9.4 1.94 6.73-1.63-1.86-17.17zm-6.19 1.28l-2.02.66c-.05-.33-.14-.65-.25-.97.77-.25 1.5-.49 2.27-.74.04.35.03.71 0 1.05z" />
+        <svg className="size-full" viewBox="0 0 109 124" fill="none">
+          <path
+            d="M74.9 14.1c-.3-2.3-2.4-3.7-4.4-3.6-2 .1-13.3 1.2-13.3 1.2s-8.9-8.8-9.9-9.8c-1-1-3-1.5-4.7-1-1.6.4-8.8 2.7-8.8 2.7s-3.7-1.7-5.9-1.7c-5.9 0-10.7 4.7-10.7 10.7 0 2.2.6 4.3 1.8 6.1L4.6 24.3c-2.4.7-4 2.9-3.9 5.4l5.3 75.8c.2 2.6 2 4.7 4.6 5.1l43.7 7.7c.6.1 1.2.1 1.8.1.9 0 1.9-.3 2.7-.8l45.4-23.7c2.2-1.2 3.5-3.5 3.3-6L102.3 22c-.2-2.8-2.5-4.8-5.3-4.5l-22.1-3.4z"
+            fill="#95BF47"
+          />
+          <path
+            d="M60.1 36.6l-8.6 2.8s-3.2-6.5-7.3-8.8c-4.1-2.4-9.3-1.6-11.8.8-2.6 2.4-3.1 6.5-1.3 9.5 1.8 3 5.4 6.8 14.1 11.2 12.3 6.3 19.3 15.3 17.5 25.4-1.9 10.9-11.2 16.7-21.6 15.6-12.7-1.4-18.4-11.1-18.4-11.1l7.6-4.6s3.8 6.6 8.8 8.1c5 1.5 11.3-.2 12.5-6.8 1.4-7.5-5.3-12.8-13.5-17.1-11.8-6.1-17.7-14.2-15.5-23.5 2.1-9.3 11-14.7 20.3-13.4 9.4 1.3 15.6 9 15.6 9l1.6 2.9z"
+            fill="#fff"
+          />
         </svg>
       </div>
     );
@@ -86,17 +92,17 @@ function ToolBadge({ tool }: { tool: string }) {
   return (
     <div
       title={tool}
-      className="size-7 sm:size-8 rounded-lg bg-white/95 shadow-md p-1.5 flex items-center justify-center shrink-0 backdrop-blur-xs transition-transform duration-300 hover:scale-110"
+      className="size-7 sm:size-8 rounded-lg bg-white shadow-sm p-1.5 flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-110"
     >
       <svg className="size-full" viewBox="0 0 24 24" fill="none">
-        <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#00D8FF" strokeWidth="1.6" />
+        <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#00D8FF" strokeWidth="1.8" />
         <ellipse
           cx="12"
           cy="12"
           rx="10"
           ry="4"
           stroke="#00D8FF"
-          strokeWidth="1.6"
+          strokeWidth="1.8"
           transform="rotate(60 12 12)"
         />
         <ellipse
@@ -105,28 +111,36 @@ function ToolBadge({ tool }: { tool: string }) {
           rx="10"
           ry="4"
           stroke="#00D8FF"
-          strokeWidth="1.6"
+          strokeWidth="1.8"
           transform="rotate(120 12 12)"
         />
-        <circle cx="12" cy="12" r="1.5" fill="#00D8FF" />
+        <circle cx="12" cy="12" r="1.8" fill="#00D8FF" />
       </svg>
     </div>
   );
 }
 
-function ProjectCard({ p, className }: { p: Project; className?: string }) {
+function ProjectCard({
+  p,
+  isTall = false,
+  className,
+}: {
+  p: Project;
+  isTall?: boolean;
+  className?: string;
+}) {
   const tools = p.tools && p.tools.length > 0 ? p.tools : ["Figma", "Webflow"];
-  // Select up to 2-3 clean relevant category tags for display
-  const tags = (p.categories || []).slice(0, 2);
+  // For tall/flagship card show 2 clean badges; for smaller cards keep it focused
+  const tags = isTall ? (p.categories || []).slice(0, 2) : (p.categories || []).slice(0, 1);
 
   return (
     <article
       className={cn(
-        "group relative overflow-hidden rounded-[26px] sm:rounded-[32px] bg-neutral-900 shadow-md transition-all duration-500 select-none",
+        "group relative overflow-hidden rounded-[24px] sm:rounded-[30px] bg-neutral-900 shadow-md transition-all duration-500 select-none",
         className,
       )}
     >
-      {/* Real Project Image with smooth scale */}
+      {/* Real Project Image with smooth subtle hover zoom */}
       <img
         src={p.image}
         alt={`${p.name} — ${p.categories.join(", ")} project`}
@@ -136,27 +150,29 @@ function ProjectCard({ p, className }: { p: Project; className?: string }) {
         className="absolute inset-0 size-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 pointer-events-none z-0"
       />
 
-      {/* Top badges (2-3 clean tags if card has ample room, no arrow circle) */}
-      <div className="absolute inset-x-0 top-0 p-5 sm:p-6 flex items-center justify-between z-2 pointer-events-none">
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-black/60 backdrop-blur-md border border-white/20 px-3 py-1 text-[11px] sm:text-xs font-semibold text-white tracking-wide shadow-xs"
-            >
-              {tag}
-            </span>
-          ))}
+      {/* Top badges (2-3 clean tags only if ample room, no arrow circle) */}
+      {tags.length > 0 && (
+        <div className="absolute inset-x-0 top-0 p-5 sm:p-6 flex items-center justify-between z-2 pointer-events-none">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-black/60 backdrop-blur-md border border-white/20 px-3 py-1 text-[11px] sm:text-xs font-semibold text-white tracking-wide shadow-xs"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Deep gradient wash for crisp, guaranteed text legibility without overlapping */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 via-45% to-transparent opacity-95 transition-opacity duration-300 group-hover:opacity-100 z-1" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 via-45% to-transparent opacity-95 transition-opacity duration-300 group-hover:opacity-100 z-1" />
 
       {/* Bottom overlay content: Tool logos followed by Project title & description */}
-      <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7 lg:p-8 z-2 pointer-events-none">
-        <div className="flex flex-col items-start gap-3">
-          {/* Authentic tool badges (Figma, Webflow, etc.) */}
+      <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7 z-2 pointer-events-none">
+        <div className="flex flex-col items-start gap-2.5 sm:gap-3">
+          {/* Authentic tool badges (Figma, Webflow, WordPress) */}
           <div className="flex items-center gap-2 pointer-events-auto">
             {tools.slice(0, 2).map((t) => (
               <ToolBadge key={t} tool={t} />
@@ -164,13 +180,25 @@ function ProjectCard({ p, className }: { p: Project; className?: string }) {
           </div>
 
           {/* Project Title */}
-          <h3 className="text-2xl sm:text-[27px] lg:text-[29px] font-bold tracking-tight text-white leading-tight drop-shadow-sm">
+          <h3
+            className={cn(
+              "font-bold tracking-tight text-white leading-tight drop-shadow-sm",
+              isTall ? "text-2xl sm:text-3xl lg:text-[30px]" : "text-xl sm:text-2xl lg:text-[23px]",
+            )}
+          >
             {p.name}
           </h3>
 
           {/* Project Description with generous line-height to prevent overlap */}
           {p.copy && (
-            <p className="text-xs sm:text-[14px] leading-relaxed text-neutral-200/95 max-w-md drop-shadow-xs font-normal">
+            <p
+              className={cn(
+                "leading-relaxed text-neutral-200/95 font-normal drop-shadow-xs",
+                isTall
+                  ? "text-xs sm:text-sm lg:text-[14px] max-w-lg line-clamp-3"
+                  : "text-xs sm:text-[13px] max-w-md line-clamp-2",
+              )}
+            >
               {p.copy}
             </p>
           )}
@@ -184,7 +212,7 @@ export function Portfolio() {
   const [active, setActive] = useState("All");
   const trackRef = useRef<HTMLDivElement>(null);
 
-  // Dragging and inertia refs
+  // Dragging and inertia refs for mobile swipe
   const isDownRef = useRef(false);
   const startXRef = useRef(0);
   const scrollLeftRef = useRef(0);
@@ -194,83 +222,64 @@ export function Portfolio() {
   const isDraggingRef = useRef(false);
   const animationFrameIdRef = useRef<number | null>(null);
 
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
   const [isCursorGrabbing, setIsCursorGrabbing] = useState(false);
 
   const visible =
     active === "All" ? projects : projects.filter((p) => p.categories.includes(active));
 
-  // Check scroll position for arrow buttons & progress
-  const updateScrollState = useCallback(() => {
-    if (!trackRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
-    setCanScrollLeft(scrollLeft > 10);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-  }, []);
+  // Exactly 4 projects displayed like in the reference screenshot
+  const displayProjects = visible.slice(0, 4);
 
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-    updateScrollState();
-    el.addEventListener("scroll", updateScrollState, { passive: true });
-    window.addEventListener("resize", updateScrollState);
-    return () => {
-      el.removeEventListener("scroll", updateScrollState);
-      window.removeEventListener("resize", updateScrollState);
-      if (animationFrameIdRef.current) cancelAnimationFrame(animationFrameIdRef.current);
-    };
-  }, [updateScrollState, visible]);
-
-  // Reset scroll on filter change
-  const handleFilterChange = (filter: string) => {
-    setActive(filter);
-    if (animationFrameIdRef.current) cancelAnimationFrame(animationFrameIdRef.current);
+  const handleFilterChange = (f: string) => {
+    setActive(f);
     if (trackRef.current) {
       trackRef.current.scrollTo({ left: 0, behavior: "smooth" });
     }
   };
 
-  // Button scroll triggers
-  const scrollByAmount = (amount: number) => {
-    if (!trackRef.current) return;
-    if (animationFrameIdRef.current) cancelAnimationFrame(animationFrameIdRef.current);
-    trackRef.current.scrollBy({ left: amount, behavior: "smooth" });
-  };
-
-  // Inertia momentum decay loop
-  const startMomentumDecay = () => {
-    if (animationFrameIdRef.current) cancelAnimationFrame(animationFrameIdRef.current);
+  // Inertia momentum decay for mobile/touch swipe
+  const startMomentumDecay = useCallback(() => {
+    if (animationFrameIdRef.current) {
+      cancelAnimationFrame(animationFrameIdRef.current);
+    }
 
     const decay = () => {
       if (!trackRef.current) return;
-      if (Math.abs(velocityRef.current) < 0.25) {
+      velocityRef.current *= 0.94;
+
+      if (Math.abs(velocityRef.current) > 0.4) {
+        trackRef.current.scrollLeft -= velocityRef.current;
+        animationFrameIdRef.current = requestAnimationFrame(decay);
+      } else {
         velocityRef.current = 0;
-        return;
+        animationFrameIdRef.current = null;
       }
-      trackRef.current.scrollLeft -= velocityRef.current;
-      velocityRef.current *= 0.94; // friction
-      animationFrameIdRef.current = requestAnimationFrame(decay);
     };
 
     animationFrameIdRef.current = requestAnimationFrame(decay);
-  };
+  }, []);
 
-  // Mouse drag handlers
+  useEffect(() => {
+    return () => {
+      if (animationFrameIdRef.current) {
+        cancelAnimationFrame(animationFrameIdRef.current);
+      }
+    };
+  }, []);
+
+  // Mouse drag handlers for mobile/responsive carousel
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (!trackRef.current) return;
     if (animationFrameIdRef.current) cancelAnimationFrame(animationFrameIdRef.current);
+    if (!trackRef.current) return;
 
     isDownRef.current = true;
     isDraggingRef.current = false;
-    setIsCursorGrabbing(true);
-
-    const now = performance.now();
     startXRef.current = e.pageX - trackRef.current.offsetLeft;
     scrollLeftRef.current = trackRef.current.scrollLeft;
     lastXRef.current = e.pageX;
-    lastTimeRef.current = now;
+    lastTimeRef.current = performance.now();
     velocityRef.current = 0;
+    setIsCursorGrabbing(true);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -279,7 +288,6 @@ export function Portfolio() {
 
     const x = e.pageX - trackRef.current.offsetLeft;
     const walk = x - startXRef.current;
-
     if (Math.abs(walk) > 4) {
       isDraggingRef.current = true;
     }
@@ -385,81 +393,67 @@ export function Portfolio() {
           })}
         </Reveal>
 
-        {/* Header Controls: Drag/Swipe Hint and Left/Right Navigation Buttons */}
-        <div className="mt-10 sm:mt-12 flex items-center justify-between border-b border-neutral-200/80 pb-4">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-500 font-medium select-none">
-            <span className="size-2 rounded-full bg-[#2bee18] animate-pulse" />
-            <span>Drag with cursor or swipe on mobile to view projects</span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => scrollByAmount(-480)}
-              disabled={!canScrollLeft}
-              aria-label="Previous projects"
-              className={cn(
-                "size-10 sm:size-11 rounded-full border border-neutral-300 flex items-center justify-center transition-all duration-200",
-                canScrollLeft
-                  ? "bg-white text-neutral-900 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 cursor-pointer shadow-xs active:scale-95"
-                  : "bg-neutral-100 text-neutral-400 border-neutral-200 cursor-not-allowed opacity-50",
-              )}
-            >
-              <ChevronLeft className="size-5" />
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollByAmount(480)}
-              disabled={!canScrollRight}
-              aria-label="Next projects"
-              className={cn(
-                "size-10 sm:size-11 rounded-full border border-neutral-300 flex items-center justify-center transition-all duration-200",
-                canScrollRight
-                  ? "bg-white text-neutral-900 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 cursor-pointer shadow-xs active:scale-95"
-                  : "bg-neutral-100 text-neutral-400 border-neutral-200 cursor-not-allowed opacity-50",
-              )}
-            >
-              <ChevronRight className="size-5" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Full-width Horizontal Swipeable/Draggable Carousel Track */}
-      <div className="relative mt-8 sm:mt-10 w-full">
-        <div
-          ref={trackRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUpOrLeave}
-          onMouseLeave={handleMouseUpOrLeave}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          className={cn(
-            "flex gap-5 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth px-5 sm:px-8 lg:px-12 py-3",
-            isCursorGrabbing ? "cursor-grabbing" : "cursor-grab",
-          )}
-          style={{
-            WebkitOverflowScrolling: "touch",
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-        >
-          {visible.map((p) => (
-            <div
-              key={p.name}
-              className="w-[84vw] max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] h-[520px] sm:h-[580px] lg:h-[620px] shrink-0 snap-start"
-            >
-              <ProjectCard p={p} className="h-full w-full" />
+        {/* Desktop Bento Grid: Exactly 4 projects matching the reference screenshot */}
+        <div className="hidden lg:grid lg:grid-cols-12 gap-5 lg:gap-6 mt-12 sm:mt-14">
+          {/* Left Column: 1 Tall Flagship Card */}
+          {displayProjects[0] && (
+            <div className="lg:col-span-6 h-[660px]">
+              <ProjectCard p={displayProjects[0]} isTall className="h-full w-full" />
             </div>
-          ))}
+          )}
 
-          {/* End spacing spacer */}
-          <div className="w-8 shrink-0" aria-hidden="true" />
+          {/* Right Column: 1 Wide Top Card + 2 Square-ish Bottom Cards */}
+          <div className="lg:col-span-6 flex flex-col gap-5 lg:gap-6 h-[660px]">
+            {displayProjects[1] && (
+              <div className="h-[318px] w-full">
+                <ProjectCard p={displayProjects[1]} className="h-full w-full" />
+              </div>
+            )}
+            <div className="grid grid-cols-2 gap-5 lg:gap-6 flex-1 h-[318px]">
+              {displayProjects[2] && (
+                <ProjectCard p={displayProjects[2]} className="h-full w-full" />
+              )}
+              {displayProjects[3] && (
+                <ProjectCard p={displayProjects[3]} className="h-full w-full" />
+              )}
+            </div>
+          </div>
         </div>
 
-        {visible.length === 0 && (
+        {/* Mobile & Tablet Swipeable Carousel Track: Responsive horizontal swipe with touch and mouse drag */}
+        <div className="lg:hidden relative mt-10 -mx-5 sm:-mx-8">
+          <div
+            ref={trackRef}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUpOrLeave}
+            onMouseLeave={handleMouseUpOrLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className={cn(
+              "flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-5 sm:px-8 py-2",
+              isCursorGrabbing ? "cursor-grabbing" : "cursor-grab",
+            )}
+            style={{
+              WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            {displayProjects.map((p, idx) => (
+              <div
+                key={p.name}
+                className="w-[84vw] max-w-[340px] sm:max-w-[400px] h-[500px] sm:h-[540px] shrink-0 snap-start"
+              >
+                <ProjectCard p={p} isTall={idx === 0} className="h-full w-full" />
+              </div>
+            ))}
+            <div className="w-4 shrink-0" aria-hidden="true" />
+          </div>
+        </div>
+
+        {displayProjects.length === 0 && (
           <p className="mt-16 text-center text-neutral-500 text-base">
             No projects found in this category.
           </p>
