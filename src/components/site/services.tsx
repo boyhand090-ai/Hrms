@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { siteData } from "@/data/webdev/siteData";
 import { Reveal } from "./reveal";
@@ -231,21 +231,32 @@ export function Services() {
   const startX = useRef(0);
   const dragStartOffset = useRef(0);
   const isDraggingRef = useRef(false);
+  const velocityRef = useRef(0);
+  const lastXRef = useRef(0);
+  const lastTimeRef = useRef(0);
 
-  // Smooth continuous GPU-accelerated requestAnimationFrame infinite loop
+  // Smooth continuous GPU-accelerated requestAnimationFrame infinite loop with inertia physics
   useEffect(() => {
     let animId: number;
+    let lastFrameTime = performance.now();
 
-    const tick = () => {
+    const tick = (now: number) => {
       const track = trackRef.current;
       if (!track) {
         animId = requestAnimationFrame(tick);
         return;
       }
 
-      // Automatically move continuously if not hovered or actively dragging
-      if (!isHovered.current && !isDown.current) {
-        offsetRef.current -= 1.0;
+      const dt = Math.min((now - lastFrameTime) / 1000, 0.1);
+      lastFrameTime = now;
+
+      // Handle swipe/drag release inertia physics
+      if (!isDown.current && Math.abs(velocityRef.current) > 0.08) {
+        offsetRef.current += velocityRef.current * dt * 60;
+        velocityRef.current *= Math.pow(0.92, dt * 60); // smooth friction deceleration
+      } else if (!isHovered.current && !isDown.current) {
+        // Continuous gentle auto-glide
+        offsetRef.current -= 0.85;
       }
 
       // Seamless infinite looping wrap
@@ -279,15 +290,25 @@ export function Services() {
     isDown.current = true;
     isDraggingRef.current = false;
     startX.current = e.pageX;
+    lastXRef.current = e.pageX;
+    lastTimeRef.current = performance.now();
+    velocityRef.current = 0;
     dragStartOffset.current = offsetRef.current;
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDown.current) return;
+    const now = performance.now();
     const diff = e.pageX - startX.current;
-    if (Math.abs(diff) > 5) {
+    if (Math.abs(diff) > 4) {
       isDraggingRef.current = true;
     }
+    const stepDiff = e.pageX - lastXRef.current;
+    const dt = Math.max(now - lastTimeRef.current, 1);
+    velocityRef.current = (stepDiff / dt) * 16;
+    lastXRef.current = e.pageX;
+    lastTimeRef.current = now;
+
     offsetRef.current = dragStartOffset.current + diff;
   };
 
@@ -295,45 +316,44 @@ export function Services() {
     isDown.current = false;
   };
 
+  // Touch handlers for mobile screens
   const handleTouchStart = (e: React.TouchEvent) => {
     isHovered.current = true;
     isDown.current = true;
     isDraggingRef.current = false;
     const touch = e.touches[0];
-    if (touch) startX.current = touch.pageX;
-    dragStartOffset.current = offsetRef.current;
+    if (touch) {
+      startX.current = touch.pageX;
+      lastXRef.current = touch.pageX;
+      lastTimeRef.current = performance.now();
+      velocityRef.current = 0;
+      dragStartOffset.current = offsetRef.current;
+    }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDown.current) return;
     const touch = e.touches[0];
     if (!touch) return;
+    const now = performance.now();
     const diff = touch.pageX - startX.current;
-    if (Math.abs(diff) > 5) {
+    if (Math.abs(diff) > 4) {
       isDraggingRef.current = true;
     }
+    const stepDiff = touch.pageX - lastXRef.current;
+    const dt = Math.max(now - lastTimeRef.current, 1);
+    velocityRef.current = (stepDiff / dt) * 16;
+    lastXRef.current = touch.pageX;
+    lastTimeRef.current = now;
+
     offsetRef.current = dragStartOffset.current + diff;
   };
 
   const handleTouchEnd = () => {
-    isHovered.current = false;
     isDown.current = false;
-  };
-
-  const scroll = (direction: "left" | "right") => {
-    const shift = 380;
-    offsetRef.current += direction === "left" ? shift : -shift;
-    if (trackRef.current) {
-      const halfWidth = trackRef.current.scrollWidth / 2;
-      if (halfWidth > 0) {
-        if (offsetRef.current <= -halfWidth) {
-          offsetRef.current += halfWidth;
-        } else if (offsetRef.current > 0) {
-          offsetRef.current -= halfWidth;
-        }
-      }
-      trackRef.current.style.transform = `translate3d(${offsetRef.current}px, 0, 0)`;
-    }
+    setTimeout(() => {
+      isHovered.current = false;
+    }, 800);
   };
 
   const handleCardClick = (e: React.MouseEvent) => {
@@ -398,7 +418,7 @@ export function Services() {
                 You need a partner who gets your business and covers everything. From branding to
                 UI/UX design and web development, you can rely on us for everything.
               </p>
-              <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
+              <div className="mt-8 flex items-center justify-start">
                 <Magnetic>
                   <Link
                     to="/services/web-development"
@@ -408,26 +428,6 @@ export function Services() {
                     <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </Magnetic>
-
-                {/* Carousel navigation controls */}
-                <div className="flex items-center gap-2.5">
-                  <button
-                    type="button"
-                    onClick={() => scroll("left")}
-                    aria-label="Previous services"
-                    className="pill flex size-11 items-center justify-center border border-white/20 bg-black/70 text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-black active:scale-95 cursor-pointer"
-                  >
-                    <ArrowLeft className="size-4" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => scroll("right")}
-                    aria-label="Next services"
-                    className="pill flex size-11 items-center justify-center border border-white/20 bg-black/70 text-white backdrop-blur-md transition-all hover:border-white hover:bg-white hover:text-black active:scale-95 cursor-pointer"
-                  >
-                    <ArrowRight className="size-4" />
-                  </button>
-                </div>
               </div>
             </div>
           </Reveal>
