@@ -32,18 +32,23 @@ export const TechStack: React.FC<TechStackProps> = ({ data }) => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-[20px] sm:gap-[28px] md:gap-[36px]">
           {tech_stack.items.map((tech, idx) => (
             <div
-              key={idx}
-              className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-[24px] bg-[#181818] border border-white/5 shadow-xl transition-all duration-300 hover:border-white/20 hover:bg-[#202020] hover:-translate-y-1.5 group aspect-square"
+              key={`${tech.name}-${idx}`}
+              className="flex flex-col items-center justify-center p-6 sm:p-8 rounded-[24px] bg-[#181818] border border-white/5 shadow-xl transition-all duration-300 hover:border-white/20 hover:bg-[#202020] hover:-translate-y-1.5 group aspect-square select-none cursor-pointer"
             >
-              <div className="w-[80px] sm:w-[100px] md:w-[130px] h-[80px] sm:h-[100px] md:h-[130px] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+              <div className="w-[80px] sm:w-[100px] md:w-[120px] h-[80px] sm:h-[100px] md:h-[120px] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
                 <img
                   src={tech.image}
                   alt={tech.name}
-                  className="w-full h-full object-contain filter drop-shadow-lg"
+                  onError={(e) => {
+                    // Fallback to react or figma icon if missing
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = "/assets/tools/react.svg";
+                  }}
+                  className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
                   loading="lazy"
                 />
               </div>
-              <span className="text-[#ffffff] font-semibold text-lg sm:text-xl capitalize tracking-tight group-hover:text-[#9AFD0D] transition-colors">
+              <span className="text-[#ffffff] font-semibold text-base sm:text-lg md:text-xl capitalize tracking-tight group-hover:text-[#9AFD0D] transition-colors text-center">
                 {tech.name}
               </span>
             </div>

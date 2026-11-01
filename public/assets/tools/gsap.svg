@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <rect width="100" height="100" rx="22" fill="#0AE448"/>
-  <text x="50" y="62" font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="-1">GSAP</text>
+  <rect width="100" height="100" rx="22" fill="#0E1712"/>
+  <circle cx="50" cy="50" r="32" fill="#0AE448"/>
+  <path fill="#0E1712" d="M38 34h8v32h-8zM54 34h8v32h-8z"/>
+  <path fill="#0E1712" d="M38 46h24v8H38z"/>
+  <polygon points="46,24 54,24 50,16" fill="#0AE448"/>
 </svg>

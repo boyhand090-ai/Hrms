@@ -1,28 +1,38 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { siteData } from "@/data/webdev/siteData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion, useMotionValue, animate } from "motion/react";
 
 interface SubServicesProps {
   data?: typeof siteData.subservices;
 }
 
+const FALLBACK_SUB_IMAGES = [
+  "/assets/subservices/web-strategy.webp",
+  "/assets/subservices/frontend-development.webp",
+  "/assets/subservices/bacekend-development.webp",
+  "/assets/subservices/cms-intregation.webp",
+  "/assets/subservices/testing-qa.webp",
+  "/assets/subservices/SEO-basic.webp",
+  "/assets/subservices/Deployment.webp",
+  "/assets/subservices/Maintence-support.webp",
+];
+
 export const SubServices: React.FC<SubServicesProps> = ({ data }) => {
   const subservices = data || siteData.subservices;
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [maxIndex, setMaxIndex] = useState(subservices.cards.length - 1);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
   const [cardWidth, setCardWidth] = useState(380);
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollStartRef = useRef(0);
   const gap = 24;
 
-  const x = useMotionValue(0);
-  const isDraggingRef = useRef(false);
+  // Triplicate cards for completely seamless infinite loop
+  const loopCards = [...subservices.cards, ...subservices.cards, ...subservices.cards];
 
-  // Update card width and max index on resize
+  // Update card width on resize
   useEffect(() => {
     const updateDimensions = () => {
-      if (!containerRef.current) return;
-      const containerWidth = containerRef.current.offsetWidth;
       let width = 380;
       if (window.innerWidth < 640) {
         width = 290;
@@ -30,49 +40,73 @@ export const SubServices: React.FC<SubServicesProps> = ({ data }) => {
         width = 330;
       }
       setCardWidth(width);
-
-      const totalTrackWidth = subservices.cards.length * (width + gap) - gap;
-      const maxScroll = Math.max(0, totalTrackWidth - containerWidth + 32);
-      const computedMax = Math.ceil(maxScroll / (width + gap));
-      setMaxIndex(Math.max(0, computedMax));
     };
 
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
-  }, [subservices.cards.length]);
+  }, []);
 
-  // Sync motion value when currentIndex changes via buttons
+  // Continuous horizontal infinite loop animation
   useEffect(() => {
-    const targetX = -currentIndex * (cardWidth + gap);
-    animate(x, targetX, {
-      type: "spring",
-      damping: 28,
-      stiffness: 220,
-      mass: 0.8,
-    });
-  }, [currentIndex, cardWidth, gap, x]);
+    const el = scrollRef.current;
+    if (!el) return;
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 1));
+    let animId: number;
+    // Smooth, calibrated speed for pleasant reading
+    const speed = 0.9;
+
+    const tick = () => {
+      if (!isHovered && !isDraggingRef.current && el) {
+        el.scrollLeft += speed;
+        // Total track is 3 sets of cards; reset seamlessly when passing 1 full set (1/3 of total)
+        const oneSetWidth = subservices.cards.length * (cardWidth + gap);
+        if (el.scrollLeft >= oneSetWidth * 2) {
+          el.scrollLeft -= oneSetWidth;
+        } else if (el.scrollLeft <= 0) {
+          el.scrollLeft += oneSetWidth;
+        }
+      }
+      animId = requestAnimationFrame(tick);
+    };
+
+    animId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animId);
+  }, [isHovered, cardWidth, gap, subservices.cards.length]);
+
+  const handlePrev = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: -(cardWidth + gap), behavior: "smooth" });
+  }, [cardWidth, gap]);
+
+  const handleNext = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: cardWidth + gap, behavior: "smooth" });
+  }, [cardWidth, gap]);
+
+  // Touch and mouse drag handlers for seamless manual scrolling
+  const onMouseDown = (e: React.MouseEvent) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    isDraggingRef.current = true;
+    startXRef.current = e.pageX - el.offsetLeft;
+    scrollStartRef.current = el.scrollLeft;
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingRef.current) return;
+    e.preventDefault();
+    const el = scrollRef.current;
+    if (!el) return;
+    const x = e.pageX - el.offsetLeft;
+    const walk = (x - startXRef.current) * 1.5;
+    el.scrollLeft = scrollStartRef.current - walk;
   };
 
-  // Wheel horizontal scrolling support
-  const handleWheel = (e: React.WheelEvent) => {
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-      e.preventDefault();
-      const currentX = x.get();
-      const maxDragLimit = -(
-        subservices.cards.length * (cardWidth + gap) -
-        (containerRef.current?.offsetWidth || 1000)
-      );
-      const newX = Math.min(0, Math.max(maxDragLimit, currentX - e.deltaX));
-      x.set(newX);
-    }
+  const onMouseUpOrLeave = () => {
+    isDraggingRef.current = false;
   };
 
   return (
@@ -102,12 +136,7 @@ export const SubServices: React.FC<SubServicesProps> = ({ data }) => {
           <button
             type="button"
             onClick={handlePrev}
-            disabled={currentIndex === 0}
-            className={`w-12 h-12 rounded-full border border-neutral-300 bg-white text-neutral-800 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95 ${
-              currentIndex === 0
-                ? "opacity-40 cursor-not-allowed"
-                : "hover:bg-black hover:text-white hover:border-black"
-            }`}
+            className="w-12 h-12 rounded-full border border-neutral-300 bg-white text-neutral-800 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95 hover:bg-black hover:text-white hover:border-black"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -115,85 +144,75 @@ export const SubServices: React.FC<SubServicesProps> = ({ data }) => {
           <button
             type="button"
             onClick={handleNext}
-            disabled={currentIndex >= maxIndex}
-            className={`w-12 h-12 rounded-full border border-neutral-300 bg-white text-neutral-800 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95 ${
-              currentIndex >= maxIndex
-                ? "opacity-40 cursor-not-allowed"
-                : "hover:bg-[#9AFD0D] hover:text-black hover:border-[#9AFD0D]"
-            }`}
+            className="w-12 h-12 rounded-full border border-neutral-300 bg-white text-neutral-800 flex items-center justify-center transition-all cursor-pointer shadow-sm active:scale-95 hover:bg-[#9AFD0D] hover:text-black hover:border-[#9AFD0D]"
             aria-label="Next slide"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Carousel Viewport Container */}
+        {/* Carousel Viewport Container (Continuous horizontal loop with drag & hover pause) */}
         <div
-          ref={containerRef}
-          onWheel={handleWheel}
-          className="w-full overflow-hidden cursor-grab active:cursor-grabbing pb-8 pt-2 px-1"
+          ref={scrollRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => {
+            setIsHovered(false);
+            onMouseUpOrLeave();
+          }}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={onMouseUpOrLeave}
+          className="w-full overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing pb-8 pt-2 px-1 no-scrollbar select-none"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            WebkitOverflowScrolling: "touch",
+          }}
         >
-          <motion.div
-            style={{ x }}
-            drag="x"
-            dragConstraints={{
-              left: -(
-                subservices.cards.length * (cardWidth + gap) -
-                (containerRef.current?.offsetWidth || 1000) +
-                40
-              ),
-              right: 0,
-            }}
-            dragElastic={0.12}
-            onDragStart={() => {
-              isDraggingRef.current = true;
-            }}
-            onDragEnd={(_, info) => {
-              setTimeout(() => {
-                isDraggingRef.current = false;
-              }, 50);
+          <div className="flex gap-[20px] md:gap-[24px] w-max will-change-transform">
+            {loopCards.map((card, idx) => {
+              const fallbackImg = FALLBACK_SUB_IMAGES[idx % FALLBACK_SUB_IMAGES.length]!;
+              const resolvedImage =
+                card.image &&
+                !card.image.includes("\u2028") &&
+                !card.image.includes("six2eight.com")
+                  ? card.image
+                  : fallbackImg;
 
-              // Update index estimate based on ending position
-              const currentX = x.get();
-              const newIndex = Math.round(-currentX / (cardWidth + gap));
-              setCurrentIndex(Math.max(0, Math.min(maxIndex, newIndex)));
-            }}
-            className="flex gap-[20px] md:gap-[24px] w-max will-change-transform"
-          >
-            {subservices.cards.map((card, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 45 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{
-                  duration: 0.65,
-                  ease: [0.16, 1, 0.3, 1],
-                  delay: idx * 0.08,
-                }}
-                style={{ width: `${cardWidth}px` }}
-                className="shrink-0"
-              >
+              return (
                 <div
-                  className="service-card sub-service-card relative bg-center bg-cover rounded-[20px] lg:rounded-[24px] flex justify-between flex-col overflow-hidden group h-[440px] md:h-[540px] lg:h-[610px] select-none cursor-pointer shadow-md"
-                  style={{ backgroundImage: `url(${card.image})` }}
+                  key={`${card.heading}-${idx}`}
+                  style={{ width: `${cardWidth}px` }}
+                  className="shrink-0 transition-transform duration-300 hover:scale-[1.01]"
                 >
-                  {/* Top block spacer */}
-                  <div className="top-block flex justify-end pt-[32px] pr-[32px]" />
+                  <div
+                    className="service-card sub-service-card relative bg-center bg-cover rounded-[20px] lg:rounded-[24px] flex justify-between flex-col overflow-hidden group h-[440px] md:h-[540px] lg:h-[610px] select-none cursor-pointer shadow-md border border-neutral-200/40"
+                    style={{ backgroundImage: `url(${resolvedImage})` }}
+                  >
+                    {/* Dark gradient overlay to guarantee text legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/15 pointer-events-none transition-opacity duration-300 group-hover:from-black/95 group-hover:via-black/50" />
 
-                  {/* Bottom expanding panel */}
-                  <div className="botton-block relative z-10 p-[20px] sm:p-[24px] lg:p-[32px] block rounded-b-[20px] lg:rounded-b-[24px]">
-                    <h3 className="text-[22px] md:text-[28px] lg:text-[34px] leading-[1.14] font-semibold text-white tracking-tight transform transition-transform duration-300 ease-out">
-                      {card.heading}
-                    </h3>
-                    <div className="excerpt-content text-[#ededed] text-[14px] md:text-[15px] leading-[23px] font-normal">
-                      {card.description}
+                    {/* Top block spacer */}
+                    <div className="top-block relative z-10 flex justify-end pt-[28px] pr-[28px]">
+                      <span className="size-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white text-xs font-mono">
+                        0{(idx % subservices.cards.length) + 1}
+                      </span>
+                    </div>
+
+                    {/* Bottom expanding panel */}
+                    <div className="botton-block relative z-10 p-[20px] sm:p-[24px] lg:p-[32px] block rounded-b-[20px] lg:rounded-b-[24px]">
+                      <h3 className="text-[22px] md:text-[28px] lg:text-[32px] leading-[1.18] font-semibold text-white tracking-tight transform transition-transform duration-300 ease-out group-hover:text-[#9AFD0D]">
+                        {card.heading}
+                      </h3>
+                      <div className="excerpt-content mt-2 text-[#ededed] text-[14px] md:text-[15px] leading-[23px] font-normal line-clamp-3 group-hover:line-clamp-none transition-all">
+                        {card.description}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

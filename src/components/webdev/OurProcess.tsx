@@ -251,29 +251,43 @@ export const OurProcess: React.FC<OurProcessProps> = ({ data }) => {
                       </div>
 
                       {/* Floating Illustration Card Beside/Behind Step (shakes when cursor reaches this step) */}
-                      {item.image && (
-                        <div
-                          className={`mt-6 md:mt-8 relative w-[180px] sm:w-[220px] md:w-[260px] aspect-[4/3] rounded-[18px] overflow-hidden bg-neutral-900/80 border p-2 transition-all duration-300 ease-out cursor-pointer ${
-                            activeStep === idx
-                              ? "process-card-shake z-30"
-                              : "border-white/10 shadow-2xl group-hover:scale-105 group-hover:border-[#9AFD0D]/30 hover:process-card-shake"
-                          }`}
-                          style={
-                            {
-                              "--base-rot": `${isEven ? 4 : -4}deg`,
-                              transform:
-                                activeStep === idx ? undefined : `rotate(${isEven ? 4 : -4}deg)`,
-                            } as React.CSSProperties
-                          }
-                        >
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-contain filter drop-shadow-md"
-                            loading="lazy"
-                          />
-                        </div>
-                      )}
+                      {(() => {
+                        const localFallback = `/assets/process/step-${(idx % 6) + 1}.webp`;
+                        const imgSrc =
+                          item.image &&
+                          !item.image.includes("\u2028") &&
+                          !item.image.includes("six2eight.com")
+                            ? item.image
+                            : localFallback;
+
+                        return (
+                          <div
+                            className={`mt-6 md:mt-8 relative w-[180px] sm:w-[220px] md:w-[260px] aspect-[4/3] rounded-[18px] overflow-hidden bg-neutral-900/90 border p-2 transition-all duration-300 ease-out cursor-pointer ${
+                              activeStep === idx
+                                ? "process-card-shake z-30"
+                                : "border-white/10 shadow-2xl group-hover:scale-105 group-hover:border-[#9AFD0D]/40 hover:process-card-shake"
+                            }`}
+                            style={
+                              {
+                                "--base-rot": `${isEven ? 4 : -4}deg`,
+                                transform:
+                                  activeStep === idx ? undefined : `rotate(${isEven ? 4 : -4}deg)`,
+                              } as React.CSSProperties
+                            }
+                          >
+                            <img
+                              src={imgSrc}
+                              alt={item.title}
+                              onError={(e) => {
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = localFallback;
+                              }}
+                              className="w-full h-full object-contain filter drop-shadow-md"
+                              loading="lazy"
+                            />
+                          </div>
+                        );
+                      })()}
                     </div>
                   </div>
                 </div>

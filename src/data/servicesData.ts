@@ -138,7 +138,7 @@ export const uiUxDesignData: FullServiceData = {
       "<p>Great design isn't just about how it looks—it's how it works. We engineer user interfaces and journeys that eliminate friction, boost user delight, and systematically increase product retention.</p>",
     buttonLabel: "Book 30-min UX Consultation!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -148,49 +148,49 @@ export const uiUxDesignData: FullServiceData = {
         heading: "User Research & Personas",
         description:
           "Deep dive into user motivations, behavior patterns, and pain points through qualitative interviews and quantitative telemetry.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Wireframing & Prototyping",
         description:
           "Rapid low- and high-fidelity clickable prototypes that allow early user testing and swift stakeholder alignment before code is written.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Design Systems & Tokens",
         description:
           "Modular, scalable Figma component libraries with WCAG accessibility tokens, speeding up development and unifying brand touchpoints.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Interaction & Micro-Animations",
         description:
           "Thoughtful micro-interactions, smooth state transitions, and tactile feedback that make digital products feel alive and rewarding.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Usability Testing & Heatmaps",
         description:
           "Rigorous user testing sessions and session recording analysis to expose drop-offs and optimize user journey flows.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Conversion Rate Optimization (CRO)",
         description:
           "Data-driven UI enhancements crafted to optimize sign-up flows, checkout funnels, and core onboarding milestones.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Mobile & Tablet UX",
         description:
           "Ergonomic thumb-zone layouts and touch gesture behaviors optimized for mobile web and native viewport viewports.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Developer Handoff & Specs",
         description:
           "Pixel-precise Figma redlines, inspectable tokens, and engineering documentation to guarantee fidelity during build.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -269,39 +269,37 @@ export const uiUxDesignData: FullServiceData = {
         title: "Discovery & User Empathy",
         description:
           "We map your product vision, interview stakeholders, and profile key target personas to establish foundational design objectives.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Information Architecture & Flows",
         description:
           "We organize sitemaps, navigation hierarchies, and user journey paths to ensure intuitive logical flow throughout the app.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Low-Fidelity Wireframes",
         description:
           "We outline structural page layouts and functional zones rapidly, iterating on feedback before investing in high-fidelity visuals.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "High-Fidelity Visual Design",
         description:
           "We infuse brand personality, typography, color harmony, and accessibility tokens into polished, contemporary screen designs.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Interactive Prototyping",
         description:
           "We craft dynamic, clickable prototypes that simulate production animations, micro-interactions, and real device transitions.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Usability Testing & Design Handoff",
         description:
           "We validate interfaces with real users, iterate on findings, and deliver exhaustive engineering documentation.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -314,7 +312,7 @@ export const uiUxDesignData: FullServiceData = {
         heading: "45%+ Higher Engagement",
         description:
           "Every flow is optimized for user clarity and cognitive ease, directly elevating time-in-app and task completion rates.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Scalable Design Systems",
@@ -421,7 +419,7 @@ export const webDesignData: FullServiceData = {
       "<p>Your website is your company's #1 growth asset. We design bespoke, immersive digital experiences that capture brand prestige, build immediate trust, and compel visitors to take action.</p>",
     buttonLabel: "Get 30-min Design Consultation!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -431,49 +429,49 @@ export const webDesignData: FullServiceData = {
         heading: "Bespoke Brand Web Design",
         description:
           "Distinctive, visually arresting web design crafted from scratch with zero cookie-cutter templates.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "High-Converting Landing Pages",
         description:
           "Optimized marketing landing pages engineered for paid traffic campaigns, SaaS launches, and high lead gen.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Responsive Mobile-First Layouts",
         description:
           "Flawless rendering and touch experiences across smartphones, tablets, laptops, and ultra-wide displays.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Interactive 3D & Micro-Animations",
         description:
           "Delightful scroll-driven animations and subtle micro-interactions that keep visitors captivated.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Typography & Visual Art Direction",
         description:
           "Harmonious typographic pairings, custom iconography, and graphic art direction aligned to your identity.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Conversion & CTA Placement",
         description:
           "Strategic visual hierarchy and narrative pacing that naturally channels visitors toward booking or purchasing.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "E-Commerce Experience Design",
         description:
           "Product detail pages and streamlined catalog browsing designed to minimize bounce and increase average order value.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Full Design System Handoff",
         description:
           "Comprehensive UI kits with all interactive states, color variables, and typography styles for turnkey builds.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -543,39 +541,37 @@ export const webDesignData: FullServiceData = {
         title: "Brand Immersion & Strategy",
         description:
           "We study your market positioning, analyze competitor websites, and define your creative direction.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Information Architecture & Wireframes",
         description:
           "We outline structural layouts, section pacing, and content hierarchies across all key customer touchpoints.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Moodboards & Art Direction",
         description:
           "We develop bespoke moodboards, color palettes, and typographic scales that capture your exact brand essence.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "High-Fidelity UI Page Design",
         description:
           "We craft striking, polished page designs with bespoke visual elements, custom badges, and high-impact hero sections.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Interactive Prototyping",
         description:
           "We assemble clickable prototypes demonstrating responsive behaviors, hover states, and smooth scroll transitions.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Complete Developer Handoff",
         description:
           "We deliver organized Figma files, asset exports, and precise responsive specs ready for production development.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -588,7 +584,7 @@ export const webDesignData: FullServiceData = {
         heading: "Award-Caliber Visual Polish",
         description:
           "Contemporary, typography-forward layouts that elevate your brand reputation above competitor noise.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Conversion-Engineered Pacing",
@@ -695,7 +691,7 @@ export const mobileAppDesignData: FullServiceData = {
       "<p>Captivate mobile users from their very first swipe. We design intuitive, tactile native mobile interfaces that adhere to Apple Human Interface and Google Material 3 standards.</p>",
     buttonLabel: "Schedule App Design Strategy!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -705,49 +701,49 @@ export const mobileAppDesignData: FullServiceData = {
         heading: "iOS Human Interface Design",
         description:
           "Native iOS app architectures that leverage Swift UI ergonomics, dynamic islands, widgets, and SF Symbols.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Android Material Design 3",
         description:
           "Fluid Android layouts adhering to Google Material You dynamic color themes and back-gesture ergonomics.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Frictionless Onboarding UX",
         description:
           "Streamlined sign-up and permission flows designed to maximize Day-1 activation and prevent drop-offs.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Thumb-Zone Navigation",
         description:
           "Ergonomic mobile interface layouts that keep primary actions comfortably within single-hand reach.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Micro-Interactions & Haptics",
         description:
           "Tactile visual feedback and motion choreographies that make tapping, dragging, and refreshing delightful.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "In-App Monetization & Paywalls",
         description:
           "High-converting paywall screens, subscription tiers, and one-tap checkout flows optimized for mobile commerce.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Dark Mode & Accessibility",
         description:
           "Native dark mode theming and high-contrast accessibility support ensuring usability across all lighting conditions.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "App Store & Play Store Assets",
         description:
           "High-impact preview screenshots and promotional graphics engineered to drive organic app store installs.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -810,39 +806,37 @@ export const mobileAppDesignData: FullServiceData = {
         title: "App Strategy & Platform Scope",
         description:
           "We align on target platforms (iOS, Android, React Native, Flutter) and define primary user utility goals.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "User Journey & Wireflows",
         description:
           "We map out comprehensive screen-to-screen user flows, error edge cases, and empty states.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "UI Design & Component Kits",
         description:
           "We build native UI components aligned with your brand identity and native platform guidelines.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Micro-Interactions & Gestures",
         description:
           "We design custom spring animations, swipe actions, pull-to-refresh, and bottom sheet physics.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Real-Device Clickable Testing",
         description:
           "We test clickable prototypes on real iPhones and Android handsets to evaluate ergonomics in hand.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Developer Redlines & Token Exports",
         description:
           "We supply exact layout specs, typography styles, vector assets, and Lottie animations to developers.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -855,7 +849,7 @@ export const mobileAppDesignData: FullServiceData = {
         heading: "92%+ Onboarding Completion",
         description:
           "Friction-free onboarding journeys designed to turn casual downloads into dedicated daily active users.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Native iOS & Android Guidelines",
@@ -957,7 +951,7 @@ export const brandingIdentityData: FullServiceData = {
       "<p>Stand out in crowded markets with an unmistakable brand presence. We forge cohesive, timeless brand identities—from iconic logos to comprehensive design guidelines—that resonate with your audience.</p>",
     buttonLabel: "Start Brand Discovery Call!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -967,49 +961,49 @@ export const brandingIdentityData: FullServiceData = {
         heading: "Brand Strategy & Positioning",
         description:
           "Define your market niche, value proposition, competitive advantages, and brand archetype.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Logo Design & Iconography",
         description:
           "Timeless, versatile vector logos, monograms, and icon marks engineered for digital and print media.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Color Psychology & Systems",
         description:
           "Scientifically curated color palettes that evoke emotional resonance and ensure high digital contrast.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Typography Hierarchy",
         description:
           "Distinctive headline, body, and monospace font pairings that give your brand a recognizable voice.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Comprehensive Brand Guidelines",
         description:
           "Exhaustive 40+ page brand stylebooks defining logo clearspace, color codes, dos & don'ts, and usage rules.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Social Media Brand Kits",
         description:
           "Ready-to-use template kits for LinkedIn, Instagram, X, and YouTube to maintain visual consistency.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Brand Voice & Messaging",
         description:
           "Actionable guidelines on tone, tagline formulations, vocabulary, and communication pillars.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Collateral & Pitch Decks",
         description:
           "Investor pitch decks, business stationery, business cards, and digital presentation templates.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -1071,33 +1065,31 @@ export const brandingIdentityData: FullServiceData = {
         title: "Brand Audit & Discovery",
         description:
           "We examine your company mission, market landscape, and audience psyche to unearth core differentiators.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Concept Exploration",
         description:
           "We develop distinct creative visual directions and logo concepts, demonstrating real-world applications.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Typography & Color Selection",
         description:
           "We refine color palettes, contrast ratios, and typographic systems that convey authority and style.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Identity Extension & Mockups",
         description:
           "We apply the identity across stationery, websites, social cards, packaging, and digital interfaces.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Comprehensive Stylebook Handover",
         description:
           "We deliver full vector packages (SVG, EPS, AI, PNG) alongside a definitive brand guideline manual.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -1110,7 +1102,7 @@ export const brandingIdentityData: FullServiceData = {
         heading: "Timeless Aesthetic Value",
         description:
           "We craft brand marks built to endure decades, avoiding ephemeral micro-trends that age poorly.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Enterprise Credibility",
@@ -1212,7 +1204,7 @@ export const wordpressDevData: FullServiceData = {
       "<p>Tired of slow, bloated WordPress templates that break with every update? We engineer custom, lightweight WordPress themes and Gutenberg block architectures built for blazing speed, enterprise security, and effortless team content editing.</p>",
     buttonLabel: "Get 30-min WordPress Consultation!",
     buttonUrl: "https://calendly.com/six2eight-sales/web-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -1222,49 +1214,49 @@ export const wordpressDevData: FullServiceData = {
         heading: "Custom Gutenberg Block Development",
         description:
           "Bespoke, modular blocks that let your marketing team assemble custom pages effortlessly without breaking layouts.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Advanced Custom Fields (ACF Pro)",
         description:
           "Tailored backend data architectures that make managing complex catalogs, case studies, and resources intuitive.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "WooCommerce E-Commerce",
         description:
           "Scalable e-commerce store builds with custom checkouts, payment integrations, and high-concurrency order handling.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Speed & Core Web Vitals",
         description:
           "Advanced asset minification, Redis object caching, and database tuning to achieve 90+ Google PageSpeed ratings.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Headless WordPress (REST / GraphQL)",
         description:
           "Leverage WordPress as a headless content engine paired with modern Next.js or React frontends.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Security Hardening & Backups",
         description:
           "Enterprise firewall integration, automated offsite backups, two-factor auth, and zero-vulnerability coding.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Seamless CMS Migrations",
         description:
           "Frictionless data migration from legacy platforms, Drupal, or older WordPress versions with zero SEO loss.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Ongoing Maintenance & Audits",
         description:
           "Proactive monthly core updates, security patching, uptime monitoring, and staging environment management.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -1334,39 +1326,37 @@ export const wordpressDevData: FullServiceData = {
         title: "Architecture & Custom Field Modeling",
         description:
           "We map out content types, taxonomy hierarchies, and custom fields to match your content strategy.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Clean Custom Theme Development",
         description:
           "We code custom Gutenberg blocks and templates using modern PHP 8.x and semantic Tailwind styling.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Third-Party API & CRM Integration",
         description:
           "We integrate CRMs, email marketing tools, custom webhooks, and payment processors seamlessly.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Speed & Core Web Vitals Optimization",
         description:
           "We configure server-side caching, image WebP compression, and asset deferral to achieve green scores.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Security Auditing & QA",
         description:
           "We execute strict vulnerability scanning, cross-browser validation, and checkout testing.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Staging Handover & Video Training",
         description:
           "We provide bespoke video walkthroughs demonstrating how your team can manage every section effortlessly.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -1379,7 +1369,7 @@ export const wordpressDevData: FullServiceData = {
         heading: "Sub-Second Page Speeds",
         description:
           "Zero heavy builders. Clean, bespoke codebases that load instantly and rank higher on Google.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "90% Less Plugin Dependency",
@@ -1481,7 +1471,7 @@ export const shopifyDevData: FullServiceData = {
       "<p>Convert more store visitors into loyal repeat customers. We build high-speed custom Shopify stores engineered for maximum average order value (AOV), frictionless mobile checkout, and effortless catalog management.</p>",
     buttonLabel: "Get 30-min Shopify Consultation!",
     buttonUrl: "https://calendly.com/six2eight-sales/web-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -1491,49 +1481,49 @@ export const shopifyDevData: FullServiceData = {
         heading: "Custom Liquid Theme Development",
         description:
           "Bespoke, high-speed Shopify themes tailored to your brand identity with zero slow template bloat.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Shopify Plus Enterprise Architecture",
         description:
           "Advanced Shopify Plus customizations, custom checkout scripts, B2B wholesale portals, and multi-store setups.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Conversion Rate Optimization (CRO)",
         description:
           "Dynamic slide-out carts, 1-click upsells, sticky add-to-cart buttons, and trust badges designed to boost conversions.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Headless Shopify (Storefront API)",
         description:
           "Blazing fast headless e-commerce architectures combining Next.js frontends with Shopify backend checkout.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "ERP & Inventory Synchronization",
         description:
           "Seamless integration with Klaviyo, NetSuite, ShipBob, Gorgias, and custom ERP systems for automated fulfillment.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Sub-Second Mobile Store Speed",
         description:
           "Liquid code minification and modern WebP image delivery ensuring rapid product browsing on smartphones.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Subscriptions & ReCharge Setup",
         description:
           "Frictionless recurring subscription setups and customer portal customizations to maximize lifetime value (LTV).",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Platform Migration to Shopify",
         description:
           "Zero-data-loss migrations from Magento, WooCommerce, or BigCommerce including customers, orders, and SEO URLs.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -1603,39 +1593,37 @@ export const shopifyDevData: FullServiceData = {
         title: "E-Commerce Funnel Audit",
         description:
           "We examine conversion funnels, catalog architecture, and identify checkout friction points.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Shopify Theme 2.0 Architecture",
         description:
           "We build modular, section-based Liquid templates compatible with the Shopify customizer.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Product Detail & Cart Engineering",
         description:
           "We build variant swatches, dynamic bundle builders, slide-out carts, and one-click upsells.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "App Stack & Checkout Setup",
         description:
           "We integrate payment gateways, Klaviyo tracking, reviews, and fulfillment logistics.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Stress Testing & Load QA",
         description:
           "We simulate traffic spikes to verify stability during flash sales, BFCM events, and product drops.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Launch & Revenue Tracking",
         description:
           "We oversee DNS propagation and verify end-to-end pixel attribution for Meta, Google, and TikTok ads.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -1648,7 +1636,7 @@ export const shopifyDevData: FullServiceData = {
         heading: "35%+ Higher Mobile Conversion",
         description:
           "Frictionless mobile checkout flows and lightning-fast product pages keep impulse shoppers buying.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Zero Bloated Apps Needed",
@@ -1750,7 +1738,7 @@ export const webflowDevData: FullServiceData = {
       "<p>Break free from development bottlenecks. We build custom, ultra-fast Webflow websites adhering to Finsweet Client-First standards, giving your marketing team complete autonomy to publish content in seconds without writing code.</p>",
     buttonLabel: "Get 30-min Webflow Consultation!",
     buttonUrl: "https://calendly.com/six2eight-sales/web-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -1760,49 +1748,49 @@ export const webflowDevData: FullServiceData = {
         heading: "Client-First Class Architecture",
         description:
           "Built on Finsweet Client-First standards for ultra-clean class naming, modularity, and lightning-fast maintenance.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Complex Webflow CMS Systems",
         description:
           "Dynamic multi-reference CMS collections for blogs, case studies, team members, and resource libraries.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Custom Interactions & GSAP",
         description:
           "Silky 60fps scroll animations, magnetic buttons, custom cursor effects, and 3D Spline embeds.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Finsweet Attributes & Filters",
         description:
           "Advanced search, multi-faceted filtering, CMS load-more buttons, and sorting without complex third-party tools.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Custom Code & API Embeds",
         description:
           "Extending Webflow with custom JavaScript, Memberstack auth, Stripe checkouts, and CRM webhook routing.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "SEO & Schema Architecture",
         description:
           "Dynamic OpenGraph cards, JSON-LD structured data, and automatic sitemap generation for maximum search visibility.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Webflow Localization",
         description:
           "Multi-language site versions customized for international audiences with localized URLs and SEO tags.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Team Training & Video Handoff",
         description:
           "Tailored screen recordings walking your team through editing content, creating blog posts, and updating assets.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -1872,39 +1860,37 @@ export const webflowDevData: FullServiceData = {
         title: "Design Inspection & Style Guide Setup",
         description:
           "We set up global typography, colors, container widths, and buttons in a dedicated Webflow Style Guide page.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Client-First Semantic Build",
         description:
           "We construct every section using semantic HTML elements (nav, header, main, section, footer) and clean classes.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Dynamic CMS Modeling",
         description:
           "We build intuitive CMS collections with custom input validation and conditional visibility rules.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Interaction & Motion Choreography",
         description:
           "We bring pages to life with custom Webflow interactions, scroll reveals, and micro-animations.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Cross-Device QA & Speed Tuning",
         description:
           "We verify typography scaling, form submissions, and Core Web Vitals across iOS, Android, and desktop.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Custom Domain Launch & Training",
         description:
           "We handle SSL, DNS connection, automated backups, and provide your team with tailored training videos.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -1917,7 +1903,7 @@ export const webflowDevData: FullServiceData = {
         heading: "Finsweet Client-First Certified",
         description:
           "World-class code organization standards ensuring any developer or team member can easily understand the project.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Instant Content Publishing",
@@ -2019,7 +2005,7 @@ export const digitalMarketingData: FullServiceData = {
       "<p>Stop guessing where your growth comes from. We engineer full-funnel digital marketing strategies combining organic search, high-impact paid ads, conversion rate optimization, and automated lifecycle marketing to predictably acquire and retain high-value customers.</p>",
     buttonLabel: "Get 30-min Marketing Audit!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -2029,49 +2015,49 @@ export const digitalMarketingData: FullServiceData = {
         heading: "Full-Funnel Growth Strategy",
         description:
           "Holistic marketing roadmaps connecting top-of-funnel awareness to bottom-of-funnel conversion and retention.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Audience Segmentation & Personas",
         description:
           "Pinpoint customer segments based on real purchase intent, behavioral data, and lifetime revenue potential.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Conversion Rate Optimization (CRO)",
         description:
           "Systematic A/B split testing across landing pages and sales funnels to maximize revenue from existing traffic.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Lifecycle & Email Automation",
         description:
           "Triggered email flows in Klaviyo or HubSpot that nurture leads, reduce churn, and drive repeat purchases.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Attribution Modeling & Analytics",
         description:
           "Unified analytics dashboards using GA4 and custom attribution to accurately trace customer touchpoints.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Account-Based Marketing (ABM)",
         description:
           "High-precision B2B marketing targeting key accounts and decision-makers on LinkedIn and industry portals.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Retention & LTV Expansion",
         description:
           "Post-purchase customer engagement programs, loyalty funnels, and automated reactivation sequences.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Weekly Executive Reporting",
         description:
           "Transparent, real-time KPI dashboards tracking CPA, ROAS, LTV, and overall return on marketing spend.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -2141,39 +2127,37 @@ export const digitalMarketingData: FullServiceData = {
         title: "Growth Audit & Funnel Inspection",
         description:
           "We analyze current conversion rates, channel performance, and traffic quality across your entire stack.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Audience & Competitor Intelligence",
         description:
           "We identify untapped buyer cohorts and study competitor advertising funnels to uncover advantages.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Campaign Architecture & Creative Testing",
         description:
           "We deploy multi-variant ad hooks, landing page variants, and audience segments to locate winning angles.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Attribution & Data Pipeline Setup",
         description:
           "We configure server-side tracking, custom event pipelines, and executive dashboards for clear ROI visibility.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Optimization & Budget Reallocation",
         description:
           "We aggressively scale high-performing campaigns while cutting underperforming segments.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Retention & Lifecycle Scaling",
         description:
           "We build automated email and retention funnels to turn one-off customers into repeat brand advocates.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -2186,7 +2170,7 @@ export const digitalMarketingData: FullServiceData = {
         heading: "Predictable Revenue Growth",
         description:
           "Engineered acquisition channels designed to reliably generate qualified sales opportunities month after month.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "100% Closed-Loop Attribution",
@@ -2288,7 +2272,7 @@ export const paidAdsData: FullServiceData = {
       "<p>Turn ad spend into high-margin revenue. We design, launch, and scale performance advertising campaigns across Google, Meta, LinkedIn, and TikTok that systematically outperform industry benchmarks.</p>",
     buttonLabel: "Get Free Paid Ads Audit!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -2298,49 +2282,49 @@ export const paidAdsData: FullServiceData = {
         heading: "Google Search & Performance Max",
         description:
           "Capture high-intent buyers actively searching for your solutions with keyword-exact bidding and smart bidding.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Meta Ads (Facebook & Instagram)",
         description:
           "Engaging video hooks, carousel showcases, and lookalike audience targeting that drive massive direct response.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "LinkedIn B2B Lead Generation",
         description:
           "High-precision B2B ads targeting job titles, company sizes, and executive decision-makers with zero waste.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "TikTok & UGC Video Creatives",
         description:
           "Native, high-velocity short-form video ads that blend seamlessly into feeds and trigger immediate impulsive action.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Custom High-Converting Landing Pages",
         description:
           "Bespoke, rapid-loading landing pages specifically matched to ad copy for maximum quality score and conversions.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Server-Side Tracking (Meta CAPI & GTM)",
         description:
           "Bypass ad blockers and iOS privacy restrictions with robust first-party server-side event tracking.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Dynamic Retargeting Funnels",
         description:
           "Multi-touch retargeting sequences that re-engage abandoned carts and website visitors with compelling offers.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Creative Hook A/B Testing",
         description:
           "Continuous testing of headline hooks, visual angles, and calls-to-action to combat ad fatigue and lower CPA.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -2410,39 +2394,37 @@ export const paidAdsData: FullServiceData = {
         title: "Historical Account Audit",
         description:
           "We review past campaign performance, identify wasted spend, and audit tracking tags and conversion events.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Audience & Competitor Reconnaissance",
         description:
           "We research competitor ads and build high-affinity interest, keyword, and lookalike audience buckets.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Creative Production & Copywriting",
         description:
           "Our team designs high-converting ad images, UGC video concepts, and persuasive ad copy variations.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Tracking & Conversion API Setup",
         description:
           "We verify Google Enhanced Conversions, Meta CAPI, and GA4 to ensure flawless algorithmic learning.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Initial Launch & Angle Validation",
         description:
           "We launch controlled testing budgets to identify winning audience segments and high-CTR creative hooks.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Aggressive Scaling & Retargeting",
         description:
           "We scale budgets into winning campaigns while layering dynamic multi-touch retargeting sequences.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -2455,7 +2437,7 @@ export const paidAdsData: FullServiceData = {
         heading: "4.2x Average Account ROAS",
         description:
           "Rigorous bid management and creative iteration that consistently outpaces generic agency averages.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "First-Party Server-Side Tracking",
@@ -2557,7 +2539,7 @@ export const seoMarketingData: FullServiceData = {
       "<p>Rank at the top of Google for keywords that actually drive revenue. We combine technical SEO audits, high-intent topic clustering, and digital PR authority acquisition to build an unstoppable organic traffic engine for your brand.</p>",
     buttonLabel: "Get Comprehensive SEO Audit!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -2567,49 +2549,49 @@ export const seoMarketingData: FullServiceData = {
         heading: "Technical SEO Audits & Fixes",
         description:
           "Fix crawl errors, canonical loops, sitemap discrepancies, and optimize crawl budget for fast indexing.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Core Web Vitals Optimization",
         description:
           "Fine-tune Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS).",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Commercial Keyword Clustering",
         description:
           "Identify high-converting, high-intent search queries that buyers search immediately before purchasing.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Semantic Content Optimization",
         description:
           "Structure long-form pillar articles and service pages with rich schema markup and semantic entities.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "High-Authority Link Acquisition",
         description:
           "Earn editorial backlinks from real, high-DR industry publications through digital PR and white-hat outreach.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Competitor Keyword Conquesting",
         description:
           "Identify competitor keyword rankings and build superior content assets to capture their market share.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Local SEO & Google Business Profile",
         description:
           "Optimize regional presence, local map pack rankings, and local citations for high-ticket local inquiries.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Algorithm Penalty Recovery",
         description:
           "Audit link profiles, remove toxic backlinks, and resolve content quality issues following Google updates.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -2679,39 +2661,37 @@ export const seoMarketingData: FullServiceData = {
         title: "Exhaustive Technical & Indexing Audit",
         description:
           "We run deep crawler audits to diagnose crawl budget, status code errors, and Core Web Vitals bottlenecks.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Keyword Opportunity & Intent Mapping",
         description:
           "We map high-intent search queries directly to specific landing pages and content cluster hubs.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "On-Page Semantic & Schema Optimization",
         description:
           "We enhance metadata, title tags, internal linking, and rich structured data schemas (FAQ, Organization, Product).",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "High-Value Topic Cluster Content",
         description:
           "We publish comprehensive pillar pages that thoroughly satisfy user search intent and outrank competitors.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Authority Link Building & Digital PR",
         description:
           "We execute targeted outreach to earn editorial backlinks from credible, high-authority domain sources.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Rank Tracking & Revenue Correlation",
         description:
           "We monitor keyword position shifts, organic click growth, and organic revenue via Google Search Console.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -2724,7 +2704,7 @@ export const seoMarketingData: FullServiceData = {
         heading: "250%+ Organic Traffic Growth",
         description:
           "Proven track record of taking websites from obscure search positions to dominant top rankings.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "100% White-Hat Practices",
@@ -2826,7 +2806,7 @@ export const contentMarketingData: FullServiceData = {
       "<p>Build an authentic, passionate community around your brand. We source top-tier creators, produce viral short-form video assets, and craft authoritative thought-leadership content that earns buyer trust and drives sustainable customer acquisition.</p>",
     buttonLabel: "Book Creator Strategy Session!",
     buttonUrl: "https://calendly.com/six2eight-sales/li-discovery-call",
-    image: "https://cms.six2eight.com/wp-content/uploads/2025/06/webdev-1.webp",
+    image: "/assets/subservices/webdev-1.webp",
   },
   subservices: {
     block_title: "Sub services",
@@ -2836,49 +2816,49 @@ export const contentMarketingData: FullServiceData = {
         heading: "Creator & Influencer Management",
         description:
           "Vetting, negotiating, and managing authentic creators across TikTok, Instagram, YouTube, and LinkedIn.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "User-Generated Content (UGC) Production",
         description:
           "High-converting UGC video reviews, unboxings, and product demonstrations formatted for social feeds and paid ads.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Viral Short-Form Video (Reels, TikTok, Shorts)",
         description:
           "Scriptwriting, editing, and motion hook optimization engineered to maximize algorithmic reach and engagement.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "Thought Leadership & Industry Articles",
         description:
           "Deep, insightful whitepapers, case studies, and editorial essays that position your leadership as industry visionaries.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
         heading: "Multi-Platform Content Repurposing",
         description:
           "Turn one flagship video or podcast into 20+ micro-assets including carousels, quote cards, newsletters, and clips.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "Influencer Whitelisting (Spark Ads)",
         description:
           "Run paid advertising directly through creator social handles for higher credibility, CTR, and lower CPA.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Case Study & Social Proof Production",
         description:
           "In-depth customer success narratives and video testimonials that remove doubt at the bottom of the funnel.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Contracting & Usage Rights Management",
         description:
           "Ironclad creator contracts securing perpetual digital usage rights for organic posting and paid media scaling.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -2948,39 +2928,37 @@ export const contentMarketingData: FullServiceData = {
         title: "Brand Voice & Campaign Angle Brief",
         description:
           "We define campaign goals, key selling propositions, creative themes, and target demographic cohorts.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
         title: "Creator Discovery & Audience Vetting",
         description:
           "We audit creator demographics, follower authenticity, engagement rates, and previous brand collaborations.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanningTechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Contracting & Clear Rights Negotiation",
         description:
           "We secure full digital advertising rights, exclusivity clauses, and strict delivery timelines in contracts.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Content Production & Editing Review",
         description:
           "Our in-house video editors enhance raw footage with punchy captions, sound design, and branding.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "Multi-Platform Rollout & Whitelisting",
         description:
           "We launch organic posts alongside Meta/TikTok whitelisted ads targeting hyper-specific buyer audiences.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Performance Review & Creator Iteration",
         description:
           "We double down on top-performing creators and creative hooks to build ongoing long-term brand ambassador programs.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },
@@ -2993,7 +2971,7 @@ export const contentMarketingData: FullServiceData = {
         heading: "5x Higher Organic Engagement",
         description:
           "Authentic, relatable creator content consistently beats sterile corporate ads across social feeds.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/DesignersIcons.webp",
+        image: "/assets/subservices/DesignersIcons.webp",
       },
       {
         heading: "Full Paid Ad Whitelisting Rights",

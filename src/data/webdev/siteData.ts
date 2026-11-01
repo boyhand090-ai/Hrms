@@ -15,49 +15,49 @@ export const siteData = {
         heading: "Web Strategy",
         description:
           "Before jumping into full-fledged development, we help you set a clear strategy to get the best results without overspending.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/web-strategy.webp",
+        image: "/assets/subservices/web-strategy.webp",
       },
       {
         heading: "Frontend Development",
         description:
           "Develop responsive, fast-loading interfaces using HTML, CSS, JavaScript, React, and more based on your needs to deliver a seamless experience your users will love.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/frontend-development.webp",
+        image: "/assets/subservices/frontend-development.webp",
       },
       {
         heading: "Backend Development",
         description:
-          "Build reliable, scalable backend systems using the best technologies for your website\u2019s needs, ensuring smooth performance and seamless data flow.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/bacekend-development.webp",
+          "Build reliable, scalable backend systems using the best technologies for your website’s needs, ensuring smooth performance and seamless data flow.",
+        image: "/assets/subservices/bacekend-development.webp",
       },
       {
         heading: "CMS Integration",
         description:
-          "Integrate platforms like WordPress, Webflow, Shopify, or a custom CMS suited to your website\u2019s needs for easy content management and updates.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/cms-intregation.webp",
+          "Integrate platforms like WordPress, Webflow, Shopify, or a custom CMS suited to your website’s needs for easy content management and updates.",
+        image: "/assets/subservices/cms-intregation.webp",
       },
       {
-        heading: "Testing\u2028& QA",
+        heading: "Testing & QA",
         description:
           "Perform thorough cross-browser and device testing to guarantee smooth performance and a flawless user experience.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/testing-qa.webp",
+        image: "/assets/subservices/testing-qa.webp",
       },
       {
         heading: "SEO Basics",
         description:
-          "Optimize technical SEO, page speed, and metadata setup to boost your website\u2019s visibility and ranking.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/SEO-basic.webp",
+          "Optimize technical SEO, page speed, and metadata setup to boost your website’s visibility and ranking.",
+        image: "/assets/subservices/SEO-basic.webp",
       },
       {
         heading: "Deployment",
         description:
           "Launch your website on a secure, scalable hosting environment designed for reliability and speed.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Deployment.webp",
+        image: "/assets/subservices/Deployment.webp",
       },
       {
         heading: "Maintenance & Support",
         description:
           "Provide regular updates, bug fixes, and ongoing improvements to keep your website running smoothly after launch.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/06/Maintence-support.webp",
+        image: "/assets/subservices/Maintence-support.webp",
       },
     ],
   },
@@ -269,39 +269,37 @@ export const siteData = {
         title: "Kickoff Call & Requirement Gathering",
         description:
           "We start by understanding your business goals, user needs, and technical requirements to shape a clear development roadmap.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/Kickoff-CallRequirementGathering.webp",
+        image: "/assets/process/step-1.webp",
       },
       {
-        title: "Architecture Planning &  Tech Stack Selection",
+        title: "Architecture Planning & Tech Stack Selection",
         description:
           "We plan the system architecture and choose the right technologies that align with your project\u2019s scalability, performance, and security goals.",
-        image:
-          "https://cms.six2eight.com/wp-content/uploads/2025/07/ArchitecturePlanning\u2028TechStackSelection.webp",
+        image: "/assets/process/step-2.webp",
       },
       {
         title: "Frontend Development",
         description:
           "We turn designs into responsive, user-friendly interfaces using clean, modern code that works smoothly across all devices.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/FrontendDevelopment.webp",
+        image: "/assets/process/step-3.webp",
       },
       {
         title: "Backend Development",
         description:
           "Our developers build the core functionality, including APIs, databases, and server-side logic to ensure the foundation is solid and secure.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/BackendDevelopment.webp",
+        image: "/assets/process/step-4.webp",
       },
       {
         title: "QA & Bug Fixing",
         description:
           "We run thorough testing to catch bugs, ensure compatibility, and optimize loading speed for a flawless user experience.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/QABugFixing.webp",
+        image: "/assets/process/step-5.webp",
       },
       {
         title: "Launch & Ongoing Support",
         description:
           "We handle deployment, monitor performance, and provide continuous support to keep your product running and growing smoothly.",
-        image: "https://cms.six2eight.com/wp-content/uploads/2025/07/LaunchOngoingSupport.webp",
+        image: "/assets/process/step-6.webp",
       },
     ],
   },

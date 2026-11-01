@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <ellipse cx="50" cy="50" rx="46" ry="28" fill="#777BB4"/>
-  <text x="50" y="58" font-family="monospace, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-style="italic">php</text>
+  <rect width="100" height="100" rx="22" fill="#202336"/>
+  <ellipse cx="50" cy="50" rx="42" ry="26" fill="#777BB4"/>
+  <ellipse cx="50" cy="50" rx="39" ry="23" fill="#8892BF"/>
+  <path fill="#232531" d="M34.5 40h-8l-5 20h5l1.8-7.2h3.2c5.5 0 9-3 10-7.8 1-4.8-1.5-5-7-5zm-3.2 7.8h-2.5l1.2-4.8h2.5c2 0 3.5.2 3 2.5-.5 2.2-2.2 2.3-4.2 2.3zM54.5 40h-5l-5 20h5l1.8-7.2h4.5l-1.8 7.2h5L64 40h-5l-1.5 6h-4.5l1.5-6zm25 0h-8l-5 20h5l1.8-7.2h3.2c5.5 0 9-3 10-7.8 1-4.8-1.5-5-7-5zm-3.2 7.8h-2.5l1.2-4.8h2.5c2 0 3.5.2 3 2.5-.5 2.2-2.2 2.3-4.2 2.3z"/>
 </svg>
